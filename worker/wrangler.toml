@@ -1,4 +1,4 @@
-name = "vavoo-iptv-proxy"
+name = "navoprx"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
 
@@ -7,4 +7,4 @@ enabled = true
 
 [[kv_namespaces]]
 binding = "VAVOO_KV"
-id = "/play/3828793616b62b9cc5834c"
+id = "d2bb8741774446fcb2cb2eb780fff038"
