@@ -1,782 +1,522 @@
-const { Command } = require('commander');
-const crypto = require('node:crypto');
-const express = require('express');
-const { Readable } = require('node:stream');
-const { pipeline } = require('node:stream/promises');
+// ============================================================
+// VAVOO.TO IPTV PROXY — /play/<id> resolver + HLS rewriter
+// Vavoo now requires a signed "addonSig" (obtained via a ping call) before
+// catalog/resolve requests from datacenter IPs (like Cloudflare's) are accepted.
+// ============================================================
 
-const NodeCache = require('node-cache');
-
-const program = new Command();
-
-program
-    .name('vavoo-iptv-stream-proxy')
-    .description('Local proxy for Vavoo IPTV streams')
-    .option('--http-host <host>', 'Local HTTP host for displayed URLs', '127.0.0.1')
-    .option('--http-port <port>', 'Local HTTP port', '8888')
-    .option('--vavoo-language <language>', 'Language sent to Vavoo APIs, e.g. de or optional en', 'de')
-    .option('--vavoo-region <region>', 'Region sent to Vavoo APIs, default US for a broad catalog, optional DE which tends to prefilter strongly toward Germany', 'US')
-    .option('--vavoo-url-list <selection>', 'URL list to use: primary, fallback, both', 'both')
-    .option('--redirect', 'Redirect VAVOO user agents directly to resolved upstream URLs instead of proxying them', false)
-    .parse(process.argv);
-
-const options = program.opts();
-
-function getBaseSites(selection) {
-    const normalized = String(selection || 'both').trim().toLowerCase();
-
-    if (normalized === 'primary') {
-        return ['https://vavoo.to'];
-    }
-
-    if (normalized === 'fallback') {
-        return ['https://kool.to'];
-    }
-
-    return ['https://vavoo.to', 'https://kool.to'];
-}
-
-const app = express();
-const httpHost = options.httpHost;
-const port = Number(options.httpPort);
-const currentLanguage = options.vavooLanguage;
-const currentRegion = options.vavooRegion;
-const vavooUrlList = options.vavooUrlList;
-const redirect = Boolean(options.redirect);
-const baseSites = getBaseSites(vavooUrlList);
-
-const cache = new NodeCache();
-
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
+const CACHE_TTL = 300;
 const CHANNELS_CACHE_KEY = 'vavoo_channels';
-const SIGNATURE_CACHE_KEY = 'vavoo_addon_sig';
-const COUNTRY_SEPARATORS = ['➾', '⟾', '->', '→', '»', '›'];
-const PING_URLS = [
-    'https://www.vavoo.tv/api/app/ping'
-];
+const LANGUAGE = 'tr';
+const REGION = 'TR';
+const GROUP = 'Turkey';
 
-function getLocalBaseUrl() {
-    return `http://${httpHost}:${port}`;
+const BASE_SITES = ['https://vavoo.to', 'https://kool.to'];
+const PING_URL = 'https://www.vavoo.tv/api/app/ping';
+const RESOLVE_PATH = '/mediahubmx-resolve.json';
+const CATALOG_PATH = '/mediahubmx-catalog.json';
+
+// Only these extensions may be fetched via /hls-proxy — keeps it from being
+// abused as a generic open proxy.
+const ALLOWED_EXTENSIONS = new Set([
+  '.m3u8', '.ts', '.aac', '.mp3', '.m4s', '.mp4', '.m4a', '.key', '.vtt', '.webvtt'
+]);
+
+function pathExtension(urlString) {
+  try {
+    const p = new URL(urlString).pathname.toLowerCase();
+    const dot = p.lastIndexOf('.');
+    return dot === -1 ? '' : p.slice(dot);
+  } catch {
+    return '';
+  }
 }
 
-function buildHomePage() {
-    const baseUrl = getLocalBaseUrl();
-    const allM3u = `${baseUrl}/channels.m3u8`;
-    const germanyM3u = `${baseUrl}/channels.m3u8?country=Germany`;
-    const italyM3u = `${baseUrl}/channels.m3u8?country=Italy`;
-    const franceM3u = `${baseUrl}/channels.m3u8?country=France`;
-    const spainM3u = `${baseUrl}/channels.m3u8?country=Spain`;
-    const ukM3u = `${baseUrl}/channels.m3u8?country=${encodeURIComponent('United Kingdom')}`;
-    const countriesUrl = `${baseUrl}/countries`;
-
-    return `<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vavoo Proxy</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #111111;
-      --text: #f3f3f3;
-      --muted: #b8b8b8;
-      --link: #8fd3ff;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 24px 18px 40px;
-    }
-    h1 {
-      margin: 0 0 10px;
-      font-size: 28px;
-    }
-    p {
-      margin: 0 0 18px;
-      color: var(--muted);
-    }
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-    li { margin: 10px 0; }
-    a {
-      color: var(--link);
-      word-break: break-all;
-    }
-    code {
-      color: var(--text);
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Vavoo Proxy</h1>
-    <p>Local entry points for playlists and stream playback.</p>
-    <ul>
-      <li><a href="${baseUrl}/">${baseUrl}/</a></li>
-      <li><a href="${allM3u}">${allM3u}</a></li>
-      <li><a href="${germanyM3u}">${germanyM3u}</a></li>
-      <li><a href="${italyM3u}">${italyM3u}</a></li>
-      <li><a href="${franceM3u}">${franceM3u}</a></li>
-      <li><a href="${spainM3u}">${spainM3u}</a></li>
-      <li><a href="${ukM3u}">${ukM3u}</a></li>
-      <li><a href="${countriesUrl}">${countriesUrl}</a></li>
-    </ul>
-  </main>
-</body>
-</html>`;
-}
-
-function normalize(value) {
-    return String(value || '').trim().toLowerCase();
-}
-
-function normalizeChannelIdPart(value) {
-    return normalize(value).replace(/\s+/g, ' ');
-}
-
-function getStableChannelId(name, country) {
-    const seed = [
-        normalizeChannelIdPart(country),
-        normalizeChannelIdPart(name)
-    ].join('|');
-
-    return crypto.createHash('sha1').update(seed).digest('hex').slice(0, 22);
-}
-
-function extractCountry(group) {
-    const rawGroup = String(group || '').trim();
-    if (!rawGroup) {
-        return 'default';
-    }
-
-    for (const separator of COUNTRY_SEPARATORS) {
-        if (rawGroup.includes(separator)) {
-            return rawGroup.split(separator)[0].trim() || 'default';
-        }
-    }
-
-    return rawGroup;
-}
+// ============================================================
+// YARDIMCI FONKSİYONLAR
+// ============================================================
 
 function getCatalogHeaders(signature) {
-    return {
-        'content-type': 'application/json; charset=utf-8',
-        'mediahubmx-signature': signature,
-        'user-agent': 'MediaHubMX/2',
-        'accept': '*/*',
-        'Accept-Language': currentLanguage,
-        'Accept-Encoding': 'gzip, deflate',
-        'Connection': 'close',
-    };
+  return {
+    'Content-Type': 'application/json; charset=utf-8',
+    'mediahubmx-signature': signature,
+    'User-Agent': 'MediaHubMX/2',
+    'Accept': '*/*',
+    'Accept-Language': LANGUAGE,
+    'Accept-Encoding': 'gzip, deflate',
+    'Connection': 'close',
+  };
 }
 
-/**
- * Builds upstream playback headers and forwards byte ranges.
- * Example: Range `bytes=0-1023` is passed through to HLS segments.
- */
-function getStreamHeaders(req) {
-    const headers = {
-        'User-Agent': 'VAVOO/2.6',
-        'Connection': 'close'
-    };
-
-    if (req.headers.range) {
-        headers.Range = req.headers.range;
-    }
-
-    return headers;
+function getStreamHeaders() {
+  return {
+    'User-Agent': 'VAVOO/2.6',
+    'Accept': '*/*',
+    'Accept-Language': LANGUAGE,
+    'Origin': 'https://vavoo.to',
+    'Referer': 'https://vavoo.to/',
+    'Connection': 'close'
+  };
 }
 
-/**
- * Wraps an upstream HLS URL with the local HLS proxy endpoint.
- * Example: `https://host/live.m3u8` -> `/hls-proxy?url=...`.
- */
-function getProxiedUpstreamUrl(req, upstreamUrl) {
-    return `${req.protocol}://${req.headers.host}/hls-proxy?url=${encodeURIComponent(upstreamUrl)}`;
+function getPlaylistHeaders() {
+  return {
+    'User-Agent': 'libmpv',
+    'Accept': 'application/vnd.apple.mpegurl, application/x-mpegURL, */*',
+    'Accept-Language': LANGUAGE,
+    'Origin': 'https://vavoo.to',
+    'Referer': 'https://vavoo.to/',
+    'Connection': 'close'
+  };
 }
 
-/**
- * Sends HLS playlists as uncached M3U8 responses.
- */
-function setPlaylistHeaders(res) {
-    res.type('application/vnd.apple.mpegurl');
-    res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
-    res.setHeader('Pragma', 'no-cache');
+function isM3u8Url(url) {
+  try {
+    return new URL(url).pathname.toLowerCase().endsWith('.m3u8');
+  } catch {
+    return false;
+  }
 }
 
-/**
- * Returns a stable local master playlist for an upstream media playlist.
- * Example body contains one `#EXT-X-STREAM-INF` entry pointing to `/hls-proxy`.
- */
-function sendHlsMasterPlaylist(req, res, streamUrl) {
-    setPlaylistHeaders(res);
-    res.send([
-        '#EXTM3U',
-        '#EXT-X-VERSION:3',
-        '#EXT-X-STREAM-INF:BANDWIDTH=8000000',
-        getProxiedUpstreamUrl(req, streamUrl)
-    ].join('\n') + '\n');
+function isM3u8Response(url, contentType) {
+  const ct = String(contentType || '').toLowerCase();
+  return ct.includes('mpegurl') ||
+    ct.includes('mpegURL') ||
+    ct.includes('application/vnd.apple') ||
+    isM3u8Url(url);
 }
 
-/**
- * Checks whether a URL path points at an M3U8 playlist.
- * Example: `/hls/index.m3u8` returns true.
- */
-function isM3u8Url(upstreamUrl) {
-    return new URL(upstreamUrl).pathname.toLowerCase().endsWith('.m3u8');
+function describeUrl(url) {
+  try {
+    const u = new URL(url);
+    return `${u.hostname}${u.pathname}`;
+  } catch {
+    return url;
+  }
 }
 
-/**
- * Detects HLS playlists by content type or URL suffix.
- */
-function isM3u8Response(upstreamUrl, contentType) {
-    return String(contentType || '').toLowerCase().includes('mpegurl')
-        || String(contentType || '').toLowerCase().includes('application/vnd.apple')
-        || isM3u8Url(upstreamUrl);
+function getProxiedUrl(baseUrl, upstreamUrl) {
+  return `${baseUrl}/hls-proxy?url=${encodeURIComponent(upstreamUrl)}`;
 }
 
-/**
- * Keeps non-fetchable playlist URIs untouched.
- * Example: `skd://key-id` is not rewritten.
- */
-function shouldRewritePlaylistUri(uri) {
-    const trimmed = String(uri || '').trim();
-    if (!trimmed) {
-        return false;
-    }
-
-    return !/^(data|urn|skd):/i.test(trimmed);
+function shouldRewriteUri(uri) {
+  const trimmed = String(uri || '').trim();
+  if (!trimmed) return false;
+  return !/^(data|urn|skd):/i.test(trimmed);
 }
 
-/**
- * Resolves a playlist URI relative to its source and proxies it locally.
- * Example: `seg.ts` under `https://h/live/index.m3u8` becomes `/hls-proxy?.../live/seg.ts`.
- */
-function rewritePlaylistUri(req, baseUrl, uri) {
-    if (!shouldRewritePlaylistUri(uri)) {
-        return uri;
-    }
-
-    return getProxiedUpstreamUrl(req, new URL(uri, baseUrl).toString());
+function rewritePlaylistUri(baseUrl, playlistBase, uri) {
+  if (!shouldRewriteUri(uri)) return uri;
+  try {
+    const absolute = new URL(uri, playlistBase).toString();
+    return getProxiedUrl(baseUrl, absolute);
+  } catch {
+    return uri;
+  }
 }
 
-/**
- * Rewrites HLS media, variant, key, and map URLs to local proxy URLs.
- * Example: segment lines and `URI="key.bin"` attributes are rewritten.
- */
-function rewriteM3u8Playlist(req, upstreamUrl, playlist) {
-    return String(playlist)
-        .split(/\r?\n/)
-        .map(function (line) {
-            const trimmed = line.trim();
+function rewritePlaylist(baseUrl, upstreamUrl, playlist) {
+  return String(playlist)
+    .split(/\r?\n/)
+    .map(line => {
+      const trimmed = line.trim();
+      if (!trimmed) return line;
 
-            if (!trimmed) {
-                return line;
-            }
+      if (trimmed.startsWith('#')) {
+        return line.replace(/URI="([^"]+)"/g, (match, uri) => {
+          return `URI="${rewritePlaylistUri(baseUrl, upstreamUrl, uri)}"`;
+        });
+      }
 
-            if (trimmed.startsWith('#')) {
-                return line.replace(/URI="([^"]+)"/g, function (match, uri) {
-                    return `URI="${rewritePlaylistUri(req, upstreamUrl, uri)}"`;
-                });
-            }
-
-            return rewritePlaylistUri(req, upstreamUrl, trimmed);
-        })
-        .join('\n');
+      return rewritePlaylistUri(baseUrl, upstreamUrl, trimmed);
+    })
+    .join('\n');
 }
 
-/**
- * Extracts compact debug details from an HLS playlist.
- * Example: `#EXT-X-MEDIA-SEQUENCE:42` returns sequence `42`.
- */
-function getPlaylistDebugInfo(playlist) {
-    const lines = String(playlist).split(/\r?\n/);
-    const sequenceLine = lines.find((line) => line.startsWith('#EXT-X-MEDIA-SEQUENCE:'));
-    const sequence = sequenceLine ? sequenceLine.split(':')[1] : 'n/a';
-    const segments = lines.filter((line) => line.trim() && !line.trim().startsWith('#')).length;
+// ============================================================
+// API İSTEKLERİ
+// ============================================================
 
-    return { sequence, segments };
-}
+async function fetchJson(url, options = {}) {
+  const response = await fetch(url, {
+    method: options.method || 'GET',
+    headers: options.headers || {},
+    body: options.body ? JSON.stringify(options.body) : undefined,
+    signal: AbortSignal.timeout(options.timeout || 30000),
+  });
 
-/**
- * Shortens an upstream URL for readable debug logs.
- * Example: `https://a.test/x/y.ts?token=...` -> `a.test/x/y.ts`.
- */
-function describeUpstreamUrl(upstreamUrl) {
-    const url = new URL(upstreamUrl);
-    return `${url.hostname}${url.pathname}`;
-}
+  if (!response.ok) {
+    const error = new Error(`HTTP ${response.status} for ${url}`);
+    error.status = response.status;
+    throw error;
+  }
 
-function setUpstreamHeaders(res, upstream) {
-    const contentType = upstream.headers.get('content-type');
-    if (contentType) {
-        res.setHeader('Content-Type', contentType);
-    }
-
-    const contentLength = upstream.headers.get('content-length');
-    if (contentLength) {
-        res.setHeader('Content-Length', contentLength);
-    }
-
-    const acceptRanges = upstream.headers.get('accept-ranges');
-    if (acceptRanges) {
-        res.setHeader('Accept-Ranges', acceptRanges);
-    }
-
-    const contentRange = upstream.headers.get('content-range');
-    if (contentRange) {
-        res.setHeader('Content-Range', contentRange);
-    }
-}
-
-function getPingPayload() {
-    const currentTimestamp = Date.now();
-
-    return {
-        reason: 'app-focus',
-        locale: currentLanguage,
-        theme: 'dark',
-        metadata: {
-            device: {
-                type: 'desktop',
-                uniqueId: `node-${currentTimestamp}`
-            },
-            os: {
-                name: 'linux',
-                version: 'Linux',
-                abis: ['x64'],
-                host: 'node'
-            },
-            app: {
-                platform: 'electron'
-            },
-            version: {
-                package: 'tv.vavoo.app',
-                binary: '3.1.8',
-                js: '3.1.8'
-            }
-        },
-        appFocusTime: 0,
-        playerActive: false,
-        playDuration: 0,
-        devMode: false,
-        hasAddon: true,
-        castConnected: false,
-        package: 'tv.vavoo.app',
-        version: '3.1.8',
-        process: 'app',
-        firstAppStart: currentTimestamp,
-        lastAppStart: currentTimestamp,
-        ipLocation: null,
-        adblockEnabled: true,
-        proxy: {
-            supported: ['ss'],
-            engine: 'Mu',
-            enabled: false,
-            autoServer: true
-        },
-        iap: {
-            supported: false
-        }
-    };
-}
-
-async function requestJson(options) {
-    const response = await fetch(options.url, {
-        method: options.method || 'GET',
-        headers: options.headers,
-        body: options.body ? JSON.stringify(options.body) : undefined,
-        signal: AbortSignal.timeout(options.timeout || 30000),
-    });
-
-    const body = await response.json();
-
-    if (!response.ok) {
-        const error = new Error(`HTTP ${response.status} for ${options.url}`);
-        error.statusCode = response.status;
-        error.body = body;
-        throw error;
-    }
-
-    return body;
+  return response.json();
 }
 
 async function getAddonSignature() {
-    const cached = cache.get(SIGNATURE_CACHE_KEY);
-    if (cached) {
-        return cached;
-    }
+  const cached = await VAVOO_KV?.get('signature');
+  if (cached) return cached;
 
-    const payload = getPingPayload();
+  const payload = {
+    reason: 'app-focus',
+    locale: LANGUAGE,
+    theme: 'dark',
+    metadata: {
+      device: { type: 'desktop', uniqueId: `cf-${Date.now()}` },
+      os: { name: 'linux', version: 'Linux', abis: ['x64'], host: 'cloudflare' },
+      app: { platform: 'electron' }
+    },
+    appFocusTime: 0,
+    playerActive: false,
+    playDuration: 0,
+    devMode: false,
+    hasAddon: true,
+    castConnected: false,
+    package: 'tv.vavoo.app',
+    version: '3.1.8',
+    process: 'app',
+    firstAppStart: Date.now(),
+    lastAppStart: Date.now(),
+    ipLocation: null,
+    adblockEnabled: true,
+    proxy: { supported: ['ss'], engine: 'Mu', enabled: false, autoServer: true },
+    iap: { supported: false }
+  };
 
-    for (const url of PING_URLS) {
-        try {
-            const body = await requestJson({
-                method: 'POST',
-                url,
-                body: payload,
-            });
-
-            const signature = body?.addonSig;
-            if (signature) {
-                cache.set(SIGNATURE_CACHE_KEY, signature, 300);
-                return signature;
-            }
-        } catch (error) {
-            console.log(`[vavoo] addonSig request failed for ${url}: ${error.message}`);
-        }
-    }
-
-    throw new Error('Unable to obtain addonSig');
-}
-
-function mapCatalogItem(item) {
-    const name = item.name || 'Unknown Channel';
-    const country = extractCountry(item.group);
-
-    return {
-        id: getStableChannelId(name, country),
-        url: item.url,
-        name,
-        logo: item.logo || '',
-        group: item.group || '',
-        country
-    };
-}
-
-async function loadCatalogFromBase(baseUrl, signature) {
-    const catalogUrl = `${baseUrl.replace(/\/$/, '')}/mediahubmx-catalog.json`;
-    const headers = getCatalogHeaders(signature);
-    const channels = [];
-    let cursor = null;
-
-    while (true) {
-        const body = await requestJson({
-            method: 'POST',
-            url: catalogUrl,
-            headers,
-            body: {
-                language: currentLanguage,
-                region: currentRegion,
-                catalogId: 'iptv',
-                id: 'iptv',
-                adult: false,
-                search: '',
-                sort: '',
-                filter: {},
-                cursor,
-                clientVersion: '3.0.2'
-            }
-        });
-
-        const items = Array.isArray(body?.items) ? body.items : [];
-        for (const item of items) {
-            if (item?.type === 'iptv' && item?.url) {
-                channels.push(mapCatalogItem(item));
-            }
-        }
-
-        if (!body?.nextCursor) {
-            break;
-        }
-
-        cursor = body.nextCursor;
-    }
-
-    return channels;
-}
-
-async function getChannels(forceRefresh = false) {
-    if (forceRefresh) {
-        cache.del(CHANNELS_CACHE_KEY);
-    }
-
-    const cached = cache.get(CHANNELS_CACHE_KEY);
-    if (cached) {
-        return cached;
-    }
-
-    const signature = await getAddonSignature();
-
-    for (const baseUrl of baseSites) {
-        try {
-            const channels = await loadCatalogFromBase(baseUrl, signature);
-            cache.set(CHANNELS_CACHE_KEY, channels, 300);
-            console.log(`[vavoo] channels loaded from ${baseUrl}: ${channels.length}`);
-            return channels;
-        } catch (error) {
-            console.log(`[vavoo] catalog load failed for ${baseUrl}: ${error.message}`);
-        }
-    }
-
-    throw new Error('Unable to load channel catalog');
-}
-
-async function getChannelsByCountry(country) {
-    const channels = await getChannels();
-    return channels.filter((channel) => normalize(channel.country) === normalize(country));
-}
-
-async function getCountries() {
-    const channels = await getChannels();
-    return [...new Set(
-        channels
-            .map((channel) => channel.country)
-            .filter((country) => country && normalize(country) !== 'default')
-    )].sort((left, right) => left.localeCompare(right));
-}
-
-async function findChannelById(id) {
-    const channels = await getChannels();
-    return channels.find((channel) => String(channel.id) === String(id));
-}
-
-/**
- * Strips player pipe options accidentally sent as part of the path.
- * Example: `123|User-Agent=VAVOO/2.6` -> `123`.
- */
-function normalizeStreamId(id) {
-    return String(id || '').split('|')[0];
-}
-
-async function resolveStreamUrl(channel) {
-    const signature = await getAddonSignature();
-
-    for (const baseUrl of baseSites) {
-        const resolveUrl = `${baseUrl.replace(/\/$/, '')}/mediahubmx-resolve.json`;
-
-        try {
-            const body = await requestJson({
-                method: 'POST',
-                url: resolveUrl,
-                headers: getCatalogHeaders(signature),
-                body: {
-                    language: currentLanguage,
-                    region: currentRegion,
-                    url: channel.url,
-                    clientVersion: '3.0.2'
-                }
-            });
-
-            if (Array.isArray(body) && body[0]?.url) {
-                return body[0].url;
-            }
-
-            if (body?.url) {
-                return body.url;
-            }
-
-            if (body?.streamUrl) {
-                return body.streamUrl;
-            }
-        } catch (error) {
-            console.log(`[vavoo] resolve failed for ${baseUrl}: ${error.message}`);
-        }
-    }
-
-    throw new Error(`Unable to resolve stream for channel ${channel.name}`);
-}
-
-async function proxyStream(req, res, streamUrl, channelName) {
-    const connId = `${req.socket.remoteAddress}`;
-    const controller = new AbortController();
-
-    req.socket.on('close', function () {
-        console.log(`[${connId}] connection closed`);
-        controller.abort();
+  try {
+    const body = await fetchJson(PING_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: payload
     });
 
+    const signature = body?.addonSig;
+    if (signature) {
+      await VAVOO_KV?.put('signature', signature, { expirationTtl: 300 });
+      return signature;
+    }
+  } catch (error) {
+    console.log(`[vavoo] addonSig başarısız: ${error.message}`);
+  }
+
+  throw new Error('Addon imzası alınamadı');
+}
+
+async function loadCatalog(baseUrl, signature) {
+  const catalogUrl = `${baseUrl.replace(/\/$/, '')}${CATALOG_PATH}`;
+  const headers = getCatalogHeaders(signature);
+  const channels = [];
+  let cursor = null;
+
+  while (true) {
     try {
-        const upstream = await fetch(streamUrl, {
-            signal: controller.signal,
-            headers: getStreamHeaders(req)
-        });
-
-        if (!upstream.ok || !upstream.body) {
-            throw new Error(`upstream returned HTTP ${upstream.status}`);
+      const body = await fetchJson(catalogUrl, {
+        method: 'POST',
+        headers,
+        body: {
+          language: LANGUAGE,
+          region: REGION,
+          catalogId: 'iptv',
+          id: 'iptv',
+          adult: false,
+          search: '',
+          sort: '',
+          filter: { group: GROUP },
+          cursor,
+          clientVersion: '3.0.2'
         }
+      });
 
-        const contentType = upstream.headers.get('content-type');
-        if (isM3u8Response(streamUrl, contentType)) {
-            const playlist = await upstream.text();
-            const rewrittenPlaylist = rewriteM3u8Playlist(req, streamUrl, playlist);
-            setPlaylistHeaders(res);
-            res.send(rewrittenPlaylist);
-            return;
+      const items = Array.isArray(body?.items) ? body.items : [];
+      for (const item of items) {
+        const vavooId = item?.ids?.id || item?.id;
+        if (item?.type === 'iptv' && item?.url && vavooId) {
+          channels.push({
+            url: item.url,
+            name: item.name || 'Bilinmiyor',
+            logo: item.logo || '',
+            vavooId
+          });
         }
+      }
 
-        setUpstreamHeaders(res, upstream);
-        console.log(`[${connId}] starting stream proxy "${channelName}"`);
-        await pipeline(Readable.fromWeb(upstream.body), res);
+      if (!body?.nextCursor) break;
+      cursor = body.nextCursor;
     } catch (error) {
-        if (controller.signal.aborted) {
-            console.log(`[${connId}] stream ended "${channelName}"`);
-            return;
-        }
-
-        console.log(`[${connId}] stream error "${channelName}": ${error.message}`);
-        if (!res.headersSent) {
-            res.status(400).send(`stream error: ${error.message}`);
-        }
+      console.log(`[vavoo] Katalog yüklenemedi: ${error.message}`);
+      break;
     }
+  }
+
+  return channels;
 }
 
-async function proxyUpstreamUrl(req, res, upstreamUrl) {
-    const connId = `${req.socket.remoteAddress}`;
-    const controller = new AbortController();
-    const upstreamLabel = describeUpstreamUrl(upstreamUrl);
+async function getChannels() {
+  const cached = await VAVOO_KV?.get(CHANNELS_CACHE_KEY, 'json');
+  if (cached && Array.isArray(cached)) return cached;
 
-    req.socket.on('close', function () {
-        controller.abort();
-    });
+  const signature = await getAddonSignature();
+
+  for (const baseUrl of BASE_SITES) {
+    try {
+      const channels = await loadCatalog(baseUrl, signature);
+      if (channels.length > 0) {
+        await VAVOO_KV?.put(CHANNELS_CACHE_KEY, JSON.stringify(channels), { expirationTtl: CACHE_TTL });
+        return channels;
+      }
+    } catch (error) {
+      console.log(`[vavoo] Katalog yüklenemedi (${baseUrl}): ${error.message}`);
+    }
+  }
+
+  throw new Error('Kanal listesi alınamadı');
+}
+
+async function findChannel(id) {
+  const channels = await getChannels();
+  return channels.find(c => String(c.vavooId) === String(id));
+}
+
+async function resolveStream(channel) {
+  const signature = await getAddonSignature();
+
+  for (const baseUrl of BASE_SITES) {
+    const resolveUrl = `${baseUrl.replace(/\/$/, '')}${RESOLVE_PATH}`;
 
     try {
-        const upstream = await fetch(upstreamUrl, {
-            signal: controller.signal,
-            headers: getStreamHeaders(req)
-        });
+      const body = await fetchJson(resolveUrl, {
+        method: 'POST',
+        headers: getCatalogHeaders(signature),
+        body: {
+          language: LANGUAGE,
+          region: REGION,
+          url: channel.url,
+          clientVersion: '3.0.2'
+        }
+      });
 
-        if (!upstream.ok || !upstream.body) {
-            throw new Error(`upstream returned HTTP ${upstream.status}`);
+      if (Array.isArray(body) && body[0]?.url) return body[0].url;
+      if (body?.url) return body.url;
+      if (body?.streamUrl) return body.streamUrl;
+    } catch (error) {
+      console.log(`[vavoo] Çözümleme başarısız (${baseUrl}): ${error.message}`);
+    }
+  }
+
+  throw new Error(`Kanal yayını çözümlenemedi: ${channel.name}`);
+}
+
+// Cached katalogda bulunamayan (yeni/yeniden adlandırılmış) kanallar için yedek.
+async function resolveDirect(id) {
+  const signature = await getAddonSignature();
+  const directUrl = `https://vavoo.to/watch?live=${id}`;
+
+  for (const baseUrl of BASE_SITES) {
+    const resolveUrl = `${baseUrl.replace(/\/$/, '')}${RESOLVE_PATH}`;
+    try {
+      const body = await fetchJson(resolveUrl, {
+        method: 'POST',
+        headers: getCatalogHeaders(signature),
+        body: {
+          language: LANGUAGE,
+          region: REGION,
+          url: directUrl,
+          clientVersion: '3.0.2'
+        }
+      });
+
+      if (Array.isArray(body) && body[0]?.url) return body[0].url;
+      if (body?.url) return body.url;
+      if (body?.streamUrl) return body.streamUrl;
+    } catch (error) {
+      console.log(`[vavoo] Direkt çözümleme başarısız (${baseUrl}): ${error.message}`);
+    }
+  }
+
+  return null;
+}
+
+// ============================================================
+// CORS HEADERS
+// ============================================================
+
+function corsHeaders() {
+  return {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Range, User-Agent',
+    'Access-Control-Expose-Headers': 'Content-Length, Content-Range, Content-Type'
+  };
+}
+
+// ============================================================
+// WORKER ANA HANDLER
+// ============================================================
+
+export default {
+  async fetch(request, env) {
+    globalThis.VAVOO_KV = env?.VAVOO_KV;
+
+    if (request.method === 'OPTIONS') {
+      return new Response(null, { headers: corsHeaders() });
+    }
+
+    const url = new URL(request.url);
+    const baseUrl = `${url.protocol}//${url.host}`;
+    const path = url.pathname;
+
+    // ============================================================
+    // PLAY - build.js'in ürettiği iptv.m3u içindeki /play/<vavooId> linkleri
+    // ============================================================
+    if (path.startsWith('/play/')) {
+      const channelId = path.split('/')[2]?.split('|')[0];
+      if (!channelId) {
+        return new Response('Kanal ID eksik', { status: 400, headers: corsHeaders() });
+      }
+
+      try {
+        const channel = await findChannel(channelId);
+        const streamUrl = channel
+          ? await resolveStream(channel)
+          : await resolveDirect(channelId);
+
+        if (!streamUrl) {
+          return new Response(`Yayın bulunamadı: ${channelId}`, { status: 404, headers: corsHeaders() });
         }
 
-        const contentType = upstream.headers.get('content-type');
+        if (channel) {
+          console.log(`[vavoo] "${channel.name}" yayını çözümlendi: ${describeUrl(streamUrl)}`);
+        }
+
+        return await proxyStream(baseUrl, streamUrl);
+
+      } catch (error) {
+        console.log(`[vavoo] Yayın hatası: ${error.message}`);
+        return new Response(`Yayın hatası: ${error.message}`, { status: 500, headers: corsHeaders() });
+      }
+    }
+
+    // ============================================================
+    // HLS PROXY
+    // ============================================================
+    if (path === '/hls-proxy') {
+      const upstreamUrl = url.searchParams.get('url');
+      if (!upstreamUrl) {
+        return new Response('URL parametresi eksik', { status: 400, headers: corsHeaders() });
+      }
+
+      try {
+        const parsed = new URL(upstreamUrl);
+        if (!['http:', 'https:'].includes(parsed.protocol)) {
+          return new Response('Desteklenmeyen protokol', { status: 400, headers: corsHeaders() });
+        }
+        const ext = pathExtension(upstreamUrl);
+        if (ext && !ALLOWED_EXTENSIONS.has(ext)) {
+          return new Response('Desteklenmeyen dosya türü', { status: 403, headers: corsHeaders() });
+        }
+
+        // Use the same headers as the initial /play/ resolution first — the
+        // upstream CDN session/token appears to be bound to the requester's
+        // User-Agent, so switching UA between the master fetch and the
+        // follow-up playlist/segment fetches causes playback to die right
+        // after the first buffer (looks "fine" then closes instantly).
+        let response = await fetch(upstreamUrl, {
+          headers: getStreamHeaders()
+        });
+
+        if (response.status === 403 || response.status === 401) {
+          response = await fetch(upstreamUrl, {
+            headers: getPlaylistHeaders()
+          });
+        }
+
+        console.log(`[vavoo] hls-proxy ${describeUrl(upstreamUrl)} -> ${response.status}`);
+
+        if (!response.ok) {
+          return new Response(`Yayın sunucusu hatası: ${response.status}`, { status: response.status, headers: corsHeaders() });
+        }
+
+        const contentType = response.headers.get('content-type') || '';
+
         if (isM3u8Response(upstreamUrl, contentType)) {
-            const playlist = await upstream.text();
-            const rewrittenPlaylist = rewriteM3u8Playlist(req, upstreamUrl, playlist);
-            const debugInfo = getPlaylistDebugInfo(playlist);
-            console.log(`[${connId}] hls playlist "${upstreamLabel}" status=${upstream.status} sequence=${debugInfo.sequence} entries=${debugInfo.segments}`);
-            setPlaylistHeaders(res);
-            res.send(rewrittenPlaylist);
-            return;
+          const playlist = await response.text();
+          const rewritten = rewritePlaylist(baseUrl, upstreamUrl, playlist);
+          return new Response(rewritten, {
+            headers: {
+              'Content-Type': 'application/vnd.apple.mpegurl; charset=utf-8',
+              'Cache-Control': 'no-cache, no-store, must-revalidate',
+              ...corsHeaders()
+            }
+          });
         }
 
-        setUpstreamHeaders(res, upstream);
-        res.status(upstream.status);
-        console.log(`[${connId}] hls asset "${upstreamLabel}" status=${upstream.status} type="${contentType || 'unknown'}"`);
-        await pipeline(Readable.fromWeb(upstream.body), res);
-    } catch (error) {
-        if (controller.signal.aborted) {
-            console.log(`[${connId}] hls proxy ended "${upstreamLabel}"`);
-            return;
-        }
+        return new Response(response.body, {
+          status: response.status,
+          headers: {
+            'Content-Type': contentType,
+            'Content-Length': response.headers.get('content-length') || '',
+            'Accept-Ranges': response.headers.get('accept-ranges') || '',
+            'Cache-Control': 'public, max-age=3600',
+            ...corsHeaders()
+          }
+        });
 
-        console.log(`[${connId}] hls proxy error "${upstreamLabel}": ${error.message}`);
-        if (!res.headersSent) {
-            res.status(400).send(`upstream proxy error: ${error.message}`);
-        }
+      } catch (error) {
+        console.log(`[vavoo] Proxy hatası: ${error.message}`);
+        return new Response(`Proxy hatası: ${error.message}`, { status: 500, headers: corsHeaders() });
+      }
     }
+
+    // ============================================================
+    // ANA SAYFA
+    // ============================================================
+    return new Response('Kullanım: /play/<id>', {
+      status: 404,
+      headers: corsHeaders()
+    });
+  }
+};
+
+// ============================================================
+// YARDIMCI FONKSİYON: Stream Proxy
+// ============================================================
+
+async function proxyStream(baseUrl, streamUrl) {
+  // Fetch immediately in this same request instead of redirecting to /hls-proxy:
+  // the signed CDN URL appears to be bound to the requester, and a separate
+  // follow-up request (e.g. a player opening the master playlist URL) can 403.
+  const response = await fetch(streamUrl, {
+    headers: getStreamHeaders()
+  });
+
+  console.log(`[vavoo] play ${describeUrl(streamUrl)} -> ${response.status} (${response.headers.get('content-type') || 'no content-type'})`);
+
+  if (!response.ok) {
+    return new Response(`Yayın hatası: ${response.status}`, { status: response.status, headers: corsHeaders() });
+  }
+
+  const contentType = response.headers.get('content-type') || '';
+
+  if (isM3u8Response(streamUrl, contentType)) {
+    const playlist = await response.text();
+    const rewritten = rewritePlaylist(baseUrl, streamUrl, playlist);
+    return new Response(rewritten, {
+      headers: {
+        'Content-Type': 'application/vnd.apple.mpegurl; charset=utf-8',
+        'Cache-Control': 'no-cache, no-store, must-revalidate',
+        ...corsHeaders()
+      }
+    });
+  }
+
+  return new Response(response.body, {
+    status: response.status,
+    headers: {
+      'Content-Type': contentType,
+      'Content-Length': response.headers.get('content-length') || '',
+      'Accept-Ranges': response.headers.get('accept-ranges') || '',
+      'Cache-Control': 'public, max-age=3600',
+      ...corsHeaders()
+    }
+  });
 }
-
-app.get('/', function (req, res) {
-    res.type('html').send(buildHomePage());
-});
-
-app.get('/countries', async function (req, res) {
-    try {
-        res.json(await getCountries());
-    } catch (error) {
-        console.log('[vavoo] countries error', error.message);
-        res.status(500).send(error.message);
-    }
-});
-
-app.get('/channels.m3u8', async function (req, res) {
-    try {
-        const country = req.query.country;
-        const channels = country ? await getChannelsByCountry(country) : await getChannels();
-        const output = ['#EXTM3U'];
-
-        for (const channel of channels) {
-            output.push(`#EXTINF:-1 tvg-name="${channel.name}" group-title="${channel.country}" tvg-logo="${channel.logo}" tvg-id="${channel.name}",${channel.name}`);
-            output.push('#EXTVLCOPT:http-user-agent=VAVOO/2.6');
-            output.push('#EXTVLCOPT:no-ssl-verify');
-            output.push(`${req.protocol}://${req.headers.host}/stream/${encodeURIComponent(channel.id)}`);
-        }
-
-        setPlaylistHeaders(res);
-        res.send(output.join('\n'));
-    } catch (error) {
-        console.log('[vavoo] channels.m3u8 error', error.message);
-        res.status(500).send(error.message);
-    }
-});
-
-app.get('/hls-proxy', async function (req, res) {
-    const upstreamUrl = req.query.url;
-    const connId = `${req.socket.remoteAddress}`;
-
-    if (!upstreamUrl) {
-        console.log(`[${connId}] hls proxy error: missing url`);
-        res.status(400).send('missing url');
-        return;
-    }
-
-    try {
-        const parsedUrl = new URL(upstreamUrl);
-        if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
-            console.log(`[${connId}] hls proxy error "${upstreamUrl}": unsupported protocol`);
-            res.status(400).send('unsupported upstream protocol');
-            return;
-        }
-
-        console.log(`[${connId}] hls proxy opened "${describeUpstreamUrl(parsedUrl.toString())}"`);
-        await proxyUpstreamUrl(req, res, parsedUrl.toString());
-    } catch (error) {
-        console.log(`[${connId}] hls proxy error: invalid upstream url: ${error.message}`);
-        res.status(400).send(`invalid upstream url: ${error.message}`);
-    }
-});
-
-app.get('/stream/:id', async function (req, res) {
-    const connId = `${req.socket.remoteAddress}`;
-    const userAgent = req.headers['user-agent'] ?? 'unknown';
-
-    try {
-        console.log(`[${connId}] connection opened: "${userAgent}"`);
-
-        const channelId = normalizeStreamId(req.params.id);
-        const channel = await findChannelById(channelId);
-        if (!channel) {
-            res.status(404).send(`unknown channel: ${channelId}`);
-            return;
-        }
-
-        const streamUrl = await resolveStreamUrl(channel);
-        console.log(`[${connId}] resolved "${channel.name}": ${streamUrl}`);
-
-        if (redirect && userAgent.toLowerCase().includes('vavoo')) {
-            res.redirect(streamUrl);
-            return;
-        }
-
-        if (isM3u8Url(streamUrl)) {
-            console.log(`[${connId}] hls master playlist "${channel.name}"`);
-            sendHlsMasterPlaylist(req, res, streamUrl);
-            return;
-        }
-
-        await proxyStream(req, res, streamUrl, channel.name);
-    } catch (error) {
-        console.log(`[${connId}] playback error`, error.message);
-        res.status(500).send(error.message);
-    }
-});
-
-app.listen(port, () => {
-    const baseUrl = getLocalBaseUrl();
-    console.log(`Listening on ${baseUrl}/`);
-    console.log(`M3U: ${baseUrl}/channels.m3u8`);
-    console.log(`Example filtered M3U: ${baseUrl}/channels.m3u8?country=Germany`);
-    console.log(`Countries: ${baseUrl}/countries`);
-});
