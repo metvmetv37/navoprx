@@ -1,0 +1,12 @@
+{
+  "name": "vavoo-iptv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts/build.js",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

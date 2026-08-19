@@ -1,0 +1,14 @@
+{
+  "name": "vavoo-iptv-proxy",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail --format pretty"
+  },
+  "devDependencies": {
+    "wrangler": "4.117.0"
+  }
+}
