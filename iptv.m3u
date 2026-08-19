@@ -27,12 +27,12 @@ https://vavoo.to/vavoo-iptv/play/1064954896a21f89fb6b5c
 https://vavoo.to/vavoo-iptv/play/1771137539fa2adff8ebd5
 #EXTINF:-1 tvg-id="A2TV.tr@SD" tvg-name="4K TR: A2 HD .b" tvg-logo="" group-title="Ulusal",4K TR: A2 HD .b
 https://vavoo.to/vavoo-iptv/play/201905527745e40d41f657
+#EXTINF:-1 tvg-id="AKİT.TV.tr" tvg-name="4K TR: AK T TV HD .b" tvg-logo="https://i.imgur.com/oGto929.png" group-title="Dini",4K TR: AK T TV HD .b
+https://vavoo.to/vavoo-iptv/play/344558568784e9a5583953
 #EXTINF:-1 tvg-id="ATV.am@SD" tvg-name="4K TR: ATV HD .b" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Ulusal",4K TR: ATV HD .b
 https://vavoo.to/vavoo-iptv/play/2325261286cc81b01cf95d
 #EXTINF:-1 tvg-id="BabyTV.uk@UK" tvg-name="4K TR: BABYTV .b" tvg-logo="" group-title="Çocuk",4K TR: BABYTV .b
 https://vavoo.to/vavoo-iptv/play/175831345619066ec797e8
-#EXTINF:-1 tvg-id="2702376790ed1b5502281a" tvg-name="4K TR: BENG T RK .b" tvg-logo="" group-title="Haber",4K TR: BENG T RK .b
-https://vavoo.to/vavoo-iptv/play/2702376790ed1b5502281a
 #EXTINF:-1 tvg-id="BeyazTV.tr@SD" tvg-name="4K TR: BEYAZ TV HD .b" tvg-logo="https://i.imgur.com/uykIdML.png" group-title="Ulusal",4K TR: BEYAZ TV HD .b
 https://vavoo.to/vavoo-iptv/play/805689873341639546753
 #EXTINF:-1 tvg-id="BloombergHT.tr@SD" tvg-name="4K TR: BLOOMBERG HT HD .b" tvg-logo="https://i.imgur.com/bmkXfIE.png" group-title="Haber",4K TR: BLOOMBERG HT HD .b
@@ -47,22 +47,18 @@ https://vavoo.to/vavoo-iptv/play/41034540643b582da308f
 https://vavoo.to/vavoo-iptv/play/869937351ec185ded43b6
 #EXTINF:-1 tvg-id="1603" tvg-name="4K TR: DREAM T RK .b" tvg-logo="https://i.imgur.com/vJ8VaZi.png" group-title="Ulusal",4K TR: DREAM T RK .b
 https://vavoo.to/vavoo-iptv/play/42666830256873dd1e7fac
-#EXTINF:-1 tvg-id="ducktv.sk@SD" tvg-name="4K TR: DUCK TV HD .b" tvg-logo="" group-title="Çocuk",4K TR: DUCK TV HD .b
-https://vavoo.to/vavoo-iptv/play/1709129189f694bdd416ac
+#EXTINF:-1 tvg-id="4017734592f45fd8456678" tvg-name="4K TR: DISCOVERY CHANNEL HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png" group-title="Belgesel",4K TR: DISCOVERY CHANNEL HD .b
+https://vavoo.to/vavoo-iptv/play/4017734592f45fd8456678
 #EXTINF:-1 tvg-id="DisneyJr.tr@SD" tvg-name="4K TR: DISNEY JUNIOR .b" tvg-logo="" group-title="Çocuk",4K TR: DISNEY JUNIOR .b
 https://vavoo.to/vavoo-iptv/play/6492287228e9a72f932b5
 #EXTINF:-1 tvg-id="66337391cfef0b02d78776c8" tvg-name="4K TR: EKOL TV .b" tvg-logo="" group-title="Haber",4K TR: EKOL TV .b
 https://vavoo.to/vavoo-iptv/play/2706210049a80b69a6323c
-#EXTINF:-1 tvg-id="EnglishClubTV.uk@SD" tvg-name="4K TR: ENGLISH CLUB TV .b" tvg-logo="" group-title="Çocuk",4K TR: ENGLISH CLUB TV .b
-https://vavoo.to/vavoo-iptv/play/925055356337611dcda8b
 #EXTINF:-1 tvg-id="EpicDrama.uk@Turkiye" tvg-name="4K TR: EPIC DRAMA .b" tvg-logo="" group-title="Belgesel",4K TR: EPIC DRAMA .b
 https://vavoo.to/vavoo-iptv/play/6782616930c5115ad7507
 #EXTINF:-1 tvg-id="Eurosport1.fr@France" tvg-name="4K TR: EUROSPORT 1 HD .b" tvg-logo="" group-title="Spor",4K TR: EUROSPORT 1 HD .b
 https://vavoo.to/vavoo-iptv/play/207886293750ec015d3e85
 #EXTINF:-1 tvg-id="58d29bb0eefad3db9c606281" tvg-name="4K TR: EUROSPORT 2 HD .b" tvg-logo="" group-title="Spor",4K TR: EUROSPORT 2 HD .b
 https://vavoo.to/vavoo-iptv/play/41172279629184f8c9c408
-#EXTINF:-1 tvg-id="1944695268eb5e2a66f22" tvg-name="4K TR: EXXEN TV .b" tvg-logo="" group-title="Ulusal",4K TR: EXXEN TV .b
-https://vavoo.to/vavoo-iptv/play/1944695268eb5e2a66f22
 #EXTINF:-1 tvg-id="FBTV.tr@SD" tvg-name="4K TR: FB TV .b" tvg-logo="https://i.imgur.com/qBVqtYd.png" group-title="Spor",4K TR: FB TV .b
 https://vavoo.to/vavoo-iptv/play/3730681078c11a26802932
 #EXTINF:-1 tvg-id="268701784160a0471a069f" tvg-name="4K TR: FLASH TV .b" tvg-logo="https://i.imgur.com/L0NHKBM.png" group-title="Ulusal",4K TR: FLASH TV .b
@@ -105,8 +101,8 @@ https://vavoo.to/vavoo-iptv/play/40428875846b4e812374d1
 https://vavoo.to/vavoo-iptv/play/152660259946902d02c5c6
 #EXTINF:-1 tvg-id="988691374172058ef3d50" tvg-name="4K TR: NICKTOONS .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/d8/Nicktoons_UK_Logo_2014.png" group-title="Çocuk",4K TR: NICKTOONS .b
 https://vavoo.to/vavoo-iptv/play/988691374172058ef3d50
-#EXTINF:-1 tvg-id="42444473843632d84d102d" tvg-name="4K TR: POWER TURK HD .b" tvg-logo="" group-title="Müzik",4K TR: POWER TURK HD .b
-https://vavoo.to/vavoo-iptv/play/42444473843632d84d102d
+#EXTINF:-1 tvg-id="POWER.TV.HD.tr" tvg-name="4K TR: POWER TV HD .b" tvg-logo="https://i.imgur.com/XSL1gd7.png" group-title="Müzik",4K TR: POWER TV HD .b
+https://vavoo.to/vavoo-iptv/play/130796566204d6973e458e
 #EXTINF:-1 tvg-id="SİNEMA.1002.tr" tvg-name="4K TR: S NEMA 1002 HD .b" tvg-logo="https://i.imgur.com/BEFyizf.png" group-title="Film",4K TR: S NEMA 1002 HD .b
 https://vavoo.to/vavoo-iptv/play/1076643856c5c88735393f
 #EXTINF:-1 tvg-id="30005947634e6b4664fb0b" tvg-name="4K TR: S NEMA A LE 2 HD .b" tvg-logo="" group-title="Film",4K TR: S NEMA A LE 2 HD .b
@@ -137,14 +133,24 @@ https://vavoo.to/vavoo-iptv/play/9369082742fdb8ca83c62
 https://vavoo.to/vavoo-iptv/play/8795889605c7795ac9528
 #EXTINF:-1 tvg-id="SporSmart.tr@SD" tvg-name="4K TR: SPOR SMART .b" tvg-logo="https://i.imgur.com/blu6v6P.png" group-title="Spor",4K TR: SPOR SMART .b
 https://vavoo.to/vavoo-iptv/play/3159604752e1cba547bb
+#EXTINF:-1 tvg-id="SportsTV.tr@SD" tvg-name="4K TR: SPORTS TV HD .b" tvg-logo="https://i.imgur.com/tGTVcVe.jpg" group-title="Spor",4K TR: SPORTS TV HD .b
+https://vavoo.to/vavoo-iptv/play/2429298798dcd505d1ab4b
 #EXTINF:-1 tvg-id="STAR.TV.HD.tr" tvg-name="4K TR: STAR TV HD .b" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="Ulusal",4K TR: STAR TV HD .b
 https://vavoo.to/vavoo-iptv/play/219297129315c074c03f8e
+#EXTINF:-1 tvg-id="Tele1.tr@SD" tvg-name="4K TR: TELE 1 .b" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/43/Tele1_logosu.png" group-title="Haber",4K TR: TELE 1 .b
+https://vavoo.to/vavoo-iptv/play/298064721bb04fcaf61ab
 #EXTINF:-1 tvg-id="TGRTHaber.tr@SD" tvg-name="4K TR: TGRT HABER HD .b" tvg-logo="https://i.imgur.com/PrxwKDw.png" group-title="Haber",4K TR: TGRT HABER HD .b
 https://vavoo.to/vavoo-iptv/play/190715470454a282dd6577
+#EXTINF:-1 tvg-id="27949369132f08a592203d" tvg-name="4K TR: TJK TV .b" tvg-logo="https://i.imgur.com/3zHdkYG.png" group-title="Spor",4K TR: TJK TV .b
+https://vavoo.to/vavoo-iptv/play/27949369132f08a592203d
 #EXTINF:-1 tvg-id="TRT1.tr@SD" tvg-name="4K TR: TRT 1 HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/960px-TRT_1_logo_%282021-%29.svg.png" group-title="Ulusal",4K TR: TRT 1 HD .b
 https://vavoo.to/vavoo-iptv/play/1762199258e25181300f62
 #EXTINF:-1 tvg-id="TRTAvaz.tr@SD" tvg-name="4K TR: TRT AVAZ .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/TRT_Avaz_logo.svg/960px-TRT_Avaz_logo.svg.png" group-title="Ulusal",4K TR: TRT AVAZ .b
 https://vavoo.to/vavoo-iptv/play/2990410352438976430a38
+#EXTINF:-1 tvg-id="TRTBelgesel.tr@SD" tvg-name="4K TR: TRT BELGESEL HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TRT_Belgesel_logo_%282019-%29.svg/960px-TRT_Belgesel_logo_%282019-%29.svg.png" group-title="Belgesel",4K TR: TRT BELGESEL HD .b
+https://vavoo.to/vavoo-iptv/play/786973656b665fa8beb18
+#EXTINF:-1 tvg-id="1707" tvg-name="4K TR: TRT KURD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/TRT_Kurd%C3%AE_logo.svg/960px-TRT_Kurd%C3%AE_logo.svg.png" group-title="Ulusal",4K TR: TRT KURD .b
+https://vavoo.to/vavoo-iptv/play/1216632307df2afc1919fa
 #EXTINF:-1 tvg-id="TRTMuzik.tr@SD" tvg-name="4K TR: TRT M Z K .b" tvg-logo="https://i.imgur.com/JgUzRH8.png" group-title="Müzik",4K TR: TRT M Z K .b
 https://vavoo.to/vavoo-iptv/play/970382162286220f5fa39
 #EXTINF:-1 tvg-id="30291805064bacb8a4036d" tvg-name="4K TR: TRT OCUK HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/TRT_%C3%87ocuk_logo_%282021%29.svg/960px-TRT_%C3%87ocuk_logo_%282021%29.svg.png" group-title="Çocuk",4K TR: TRT OCUK HD .b
@@ -187,6 +193,8 @@ https://vavoo.to/vavoo-iptv/play/387890889759c06a2c4da1
 https://vavoo.to/vavoo-iptv/play/3415462105074dc2b1d646
 #EXTINF:-1 tvg-id="APara.tr@SD" tvg-name="A PARA .c" tvg-logo="https://i.imgur.com/GjHnq0c.png" group-title="Haber",A PARA .c
 https://vavoo.to/vavoo-iptv/play/389201701482a8da622d92
+#EXTINF:-1 tvg-id="APara.tr@SD" tvg-name="A PARA .s" tvg-logo="https://i.imgur.com/GjHnq0c.png" group-title="Haber",A PARA .s
+https://vavoo.to/vavoo-iptv/play/2318923445f9e08ad61d5f
 #EXTINF:-1 tvg-id="APara.tr@SD" tvg-name="A PARA RAW .b" tvg-logo="https://i.imgur.com/GjHnq0c.png" group-title="Haber",A PARA RAW .b
 https://vavoo.to/vavoo-iptv/play/4202445834678957f05238
 #EXTINF:-1 tvg-id="ASpor.tr@SD" tvg-name="A SPOR .c" tvg-logo="https://i.imgur.com/ZhkZzLf.png" group-title="Spor",A SPOR .c
@@ -211,26 +219,20 @@ https://vavoo.to/vavoo-iptv/play/867875861079562f15007
 https://vavoo.to/vavoo-iptv/play/19057497795e890277f212
 #EXTINF:-1 tvg-id="1835847966e01d08f3ea1f" tvg-name="A2 TV SD .b" tvg-logo="https://logo.huhu.to/logo?c=1835847966.png" group-title="Ulusal",A2 TV SD .b
 https://vavoo.to/vavoo-iptv/play/1835847966e01d08f3ea1f
-#EXTINF:-1 tvg-id="42259617152e399e6d2ef0" tvg-name="ADA TV .b" tvg-logo="" group-title="Yerel",ADA TV .b
-https://vavoo.to/vavoo-iptv/play/42259617152e399e6d2ef0
 #EXTINF:-1 tvg-id="21347352852305a53dccfa" tvg-name="ADA TV .c" tvg-logo="https://logo.huhu.to/logo?c=2134735285.png" group-title="Yerel",ADA TV .c
 https://vavoo.to/vavoo-iptv/play/21347352852305a53dccfa
+#EXTINF:-1 tvg-id="225124967e1e5b6a748e0" tvg-name="ADANA TV .b" tvg-logo="" group-title="Yerel",ADANA TV .b
+https://vavoo.to/vavoo-iptv/play/225124967e1e5b6a748e0
 #EXTINF:-1 tvg-id="832790897b9f745becff8" tvg-name="ADIBESA MASALLARI .b" tvg-logo="" group-title="Çocuk",ADIBESA MASALLARI .b
 https://vavoo.to/vavoo-iptv/play/832790897b9f745becff8
-#EXTINF:-1 tvg-id="3055235391a02f432de784" tvg-name="ADIYAMAN MERCAN TV .b" tvg-logo="" group-title="Dini",ADIYAMAN MERCAN TV .b
-https://vavoo.to/vavoo-iptv/play/3055235391a02f432de784
 #EXTINF:-1 tvg-id="2080590427f1600b6211f" tvg-name="AFROTURK TV .c" tvg-logo="https://i.imgur.com/fWlLvRA.png" group-title="Yerel",AFROTURK TV .c
 https://vavoo.to/vavoo-iptv/play/2080590427f1600b6211f
-#EXTINF:-1 tvg-id="145755891783da06dac9f" tvg-name="AFYON T RK TV .b" tvg-logo="https://i.ibb.co/tXbD8Sz/8A1HOMZ.png" group-title="Yerel",AFYON T RK TV .b
-https://vavoo.to/vavoo-iptv/play/145755891783da06dac9f
 #EXTINF:-1 tvg-id="1782534194ec2d619f7548" tvg-name="AFYON TURK .s" tvg-logo="" group-title="Yerel",AFYON TURK .s
 https://vavoo.to/vavoo-iptv/play/1782534194ec2d619f7548
-#EXTINF:-1 tvg-id="163358782054d9002fa0b0" tvg-name="AGRO TV .c" tvg-logo="https://i.imgur.com/ls9NLa4.png" group-title="Belgesel",AGRO TV .c
-https://vavoo.to/vavoo-iptv/play/163358782054d9002fa0b0
 #EXTINF:-1 tvg-id="29298467541e1d36e1991" tvg-name="AHMET KAYA .b" tvg-logo="" group-title="Müzik",AHMET KAYA .b
 https://vavoo.to/vavoo-iptv/play/29298467541e1d36e1991
-#EXTINF:-1 tvg-id="3737299250dadf300b85e4" tvg-name="AKLILI TV .s" tvg-logo="" group-title="Çocuk",AKLILI TV .s
-https://vavoo.to/vavoo-iptv/play/3737299250dadf300b85e4
+#EXTINF:-1 tvg-id="9558066722545d9635261" tvg-name="AKSARAY KANAL 68 .b" tvg-logo="" group-title="Yerel",AKSARAY KANAL 68 .b
+https://vavoo.to/vavoo-iptv/play/9558066722545d9635261
 #EXTINF:-1 tvg-id="2170702658173e1813ae19" tvg-name="AKSU TV .c" tvg-logo="https://i.imgur.com/mgDCKiy.png" group-title="Yerel",AKSU TV .c
 https://vavoo.to/vavoo-iptv/play/2170702658173e1813ae19
 #EXTINF:-1 tvg-id="2914289476ab2b9b77fc43" tvg-name="AKSU TV K MARAS .s" tvg-logo="" group-title="Yerel",AKSU TV K MARAS .s
@@ -249,26 +251,24 @@ https://vavoo.to/vavoo-iptv/play/1862240206bdae999f9066
 https://vavoo.to/vavoo-iptv/play/287303002844eef20b99c6
 #EXTINF:-1 tvg-id="76941483786c9c7e5bf21" tvg-name="ALTAS TV .c" tvg-logo="https://i.imgur.com/XaJ7fp6.png" group-title="Yerel",ALTAS TV .c
 https://vavoo.to/vavoo-iptv/play/76941483786c9c7e5bf21
-#EXTINF:-1 tvg-id="730257349f3f3bc6d733a" tvg-name="ALTAS TV ORDU .s" tvg-logo="" group-title="Yerel",ALTAS TV ORDU .s
-https://vavoo.to/vavoo-iptv/play/730257349f3f3bc6d733a
 #EXTINF:-1 tvg-id="221800489857045f13242b" tvg-name="ALVIN .b" tvg-logo="" group-title="Çocuk",ALVIN .b
 https://vavoo.to/vavoo-iptv/play/221800489857045f13242b
+#EXTINF:-1 tvg-id="4274827801d7c79d4e1a26" tvg-name="ANADOLU DERNEK TV .b" tvg-logo="https://i.imgur.com/taaRzdO.png" group-title="Yerel",ANADOLU DERNEK TV .b
+https://vavoo.to/vavoo-iptv/play/4274827801d7c79d4e1a26
 #EXTINF:-1 tvg-id="1917558455120761543969" tvg-name="ANADOLU TV .c" tvg-logo="" group-title="Yerel",ANADOLU TV .c
 https://vavoo.to/vavoo-iptv/play/1917558455120761543969
-#EXTINF:-1 tvg-id="4250561695aeafaa1af43b" tvg-name="ANAKKALE TON TV .b" tvg-logo="" group-title="Yerel",ANAKKALE TON TV .b
-https://vavoo.to/vavoo-iptv/play/4250561695aeafaa1af43b
+#EXTINF:-1 tvg-id="1943578223ce7cc4b1c284" tvg-name="ANAKKALE BOĞAZ TV .b" tvg-logo="" group-title="Yerel",ANAKKALE BOĞAZ TV .b
+https://vavoo.to/vavoo-iptv/play/1943578223ce7cc4b1c284
 #EXTINF:-1 tvg-id="40635964179eb6e60f85f9" tvg-name="ANGRY BIRDS .b" tvg-logo="" group-title="Çocuk",ANGRY BIRDS .b
 https://vavoo.to/vavoo-iptv/play/40635964179eb6e60f85f9
 #EXTINF:-1 tvg-id="1570235694b073eb3546e5" tvg-name="ANKA TV .b" tvg-logo="" group-title="Yerel",ANKA TV .b
 https://vavoo.to/vavoo-iptv/play/1570235694b073eb3546e5
-#EXTINF:-1 tvg-id="1443355363db5023a8a584" tvg-name="ANKARA T RKIYEM TV .b" tvg-logo="" group-title="Yerel",ANKARA T RKIYEM TV .b
-https://vavoo.to/vavoo-iptv/play/1443355363db5023a8a584
 #EXTINF:-1 tvg-id="7548683513f8b3f808009" tvg-name="ANLIURFA KANAL URFA .b" tvg-logo="" group-title="Yerel",ANLIURFA KANAL URFA .b
 https://vavoo.to/vavoo-iptv/play/7548683513f8b3f808009
+#EXTINF:-1 tvg-id="19407670052f2ca6260436" tvg-name="ANTALYA KANAL V .b" tvg-logo="" group-title="Yerel",ANTALYA KANAL V .b
+https://vavoo.to/vavoo-iptv/play/19407670052f2ca6260436
 #EXTINF:-1 tvg-id="ANIMAL.PLANET.HD.tr" tvg-name="ANIMAL PLANET .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png" group-title="Belgesel",ANIMAL PLANET .s
 https://vavoo.to/vavoo-iptv/play/211016135533c46812e566
-#EXTINF:-1 tvg-id="ANIMAL.PLANET.HD.tr" tvg-name="ANIMAL PLANET HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/2018_Animal_Planet_logo.svg/960px-2018_Animal_Planet_logo.svg.png" group-title="Belgesel",ANIMAL PLANET HD .b
-https://vavoo.to/vavoo-iptv/play/3913298991ebe0634b3649
 #EXTINF:-1 tvg-id="7274274379cbbe0c37b06" tvg-name="ANIMATION 1 HD .b" tvg-logo="" group-title="Çocuk",ANIMATION 1 HD .b
 https://vavoo.to/vavoo-iptv/play/7274274379cbbe0c37b06
 #EXTINF:-1 tvg-id="ANIMAUX.tr" tvg-name="ANIMAUX .b" tvg-logo="" group-title="Belgesel",ANIMAUX .b
@@ -313,28 +313,22 @@ https://vavoo.to/vavoo-iptv/play/962169494c61eb5a2ee2f
 https://vavoo.to/vavoo-iptv/play/64543153093b2057929eb
 #EXTINF:-1 tvg-id="AUTOMOTO.HD.tr" tvg-name="AUTOMOTO (FR) .s" tvg-logo="" group-title="Yaşam",AUTOMOTO (FR) .s
 https://vavoo.to/vavoo-iptv/play/3033512963c208a7f26dc2
-#EXTINF:-1 tvg-id="154080342742a01f2d589" tvg-name="AV TV .b" tvg-logo="" group-title="Yerel",AV TV .b
-https://vavoo.to/vavoo-iptv/play/154080342742a01f2d589
-#EXTINF:-1 tvg-id="334323069104712e8a0a89" tvg-name="AV TV .s" tvg-logo="" group-title="Yerel",AV TV .s
-https://vavoo.to/vavoo-iptv/play/334323069104712e8a0a89
 #EXTINF:-1 tvg-id="BabyTV.uk@France" tvg-name="BABY TV .c" tvg-logo="https://logo.huhu.to/logo?c=3820420855.png" group-title="Çocuk",BABY TV .c
 https://vavoo.to/vavoo-iptv/play/382042085583b289bf81e2
-#EXTINF:-1 tvg-id="BabyTV.uk@France" tvg-name="BABY TV HD .b" tvg-logo="" group-title="Çocuk",BABY TV HD .b
-https://vavoo.to/vavoo-iptv/play/27516589959a967260542d
 #EXTINF:-1 tvg-id="10449476678873dec140d6" tvg-name="BAHA .b" tvg-logo="" group-title="Çocuk",BAHA .b
 https://vavoo.to/vavoo-iptv/play/10449476678873dec140d6
 #EXTINF:-1 tvg-id="1519411021283d08ac01c6" tvg-name="BARBAROS TV .b" tvg-logo="" group-title="Dini",BARBAROS TV .b
 https://vavoo.to/vavoo-iptv/play/1519411021283d08ac01c6
 #EXTINF:-1 tvg-id="280573123054a8c61dd62" tvg-name="BARBIE ANIMATION 2 HD .b" tvg-logo="" group-title="Çocuk",BARBIE ANIMATION 2 HD .b
 https://vavoo.to/vavoo-iptv/play/280573123054a8c61dd62
+#EXTINF:-1 tvg-id="58015509b209433965b4" tvg-name="BBC CBEEBIES TV .s" tvg-logo="" group-title="Çocuk",BBC CBEEBIES TV .s
+https://vavoo.to/vavoo-iptv/play/58015509b209433965b4
 #EXTINF:-1 tvg-id="58d29bb0eefad3db9c6062bc" tvg-name="BBC EARTH .c" tvg-logo="https://logo.huhu.to/logo?c=2618455562.png" group-title="Belgesel",BBC EARTH .c
 https://vavoo.to/vavoo-iptv/play/2618455562938e9a0e0faf
 #EXTINF:-1 tvg-id="58d29bb0eefad3db9c6062bc" tvg-name="BBC EARTH HD .b" tvg-logo="" group-title="Belgesel",BBC EARTH HD .b
 https://vavoo.to/vavoo-iptv/play/22284968562a623d1b95b4
 #EXTINF:-1 tvg-id="3542661904b4290d308828" tvg-name="BBC EARTH PREMIERE .s" tvg-logo="" group-title="Belgesel",BBC EARTH PREMIERE .s
 https://vavoo.to/vavoo-iptv/play/3542661904b4290d308828
-#EXTINF:-1 tvg-id="3270480503ae6e3f607164" tvg-name="BEN 10 TV .b" tvg-logo="" group-title="Çocuk",BEN 10 TV .b
-https://vavoo.to/vavoo-iptv/play/3270480503ae6e3f607164
 #EXTINF:-1 tvg-id="3030241554f63b28d76ab2" tvg-name="BENGU TURK .c" tvg-logo="https://logo.huhu.to/logo?c=3030241554.png" group-title="Haber",BENGU TURK .c
 https://vavoo.to/vavoo-iptv/play/3030241554f63b28d76ab2
 #EXTINF:-1 tvg-id="40086029281eab28e64579" tvg-name="BEST AKSIYON .b" tvg-logo="" group-title="Film",BEST AKSIYON .b
@@ -345,8 +339,6 @@ https://vavoo.to/vavoo-iptv/play/182242511854592ad20a83
 https://vavoo.to/vavoo-iptv/play/1566323467670298603f5b
 #EXTINF:-1 tvg-id="4099015608239c33b463bc" tvg-name="BEST DRAM .b" tvg-logo="" group-title="Film",BEST DRAM .b
 https://vavoo.to/vavoo-iptv/play/4099015608239c33b463bc
-#EXTINF:-1 tvg-id="2591986518ae00754c4ef2" tvg-name="BEST FM T RK E POP .b" tvg-logo="" group-title="Radyo",BEST FM T RK E POP .b
-https://vavoo.to/vavoo-iptv/play/2591986518ae00754c4ef2
 #EXTINF:-1 tvg-id="4228481876db7dd6acf5b" tvg-name="BEST HABABAM SINIFI .b" tvg-logo="" group-title="Film",BEST HABABAM SINIFI .b
 https://vavoo.to/vavoo-iptv/play/4228481876db7dd6acf5b
 #EXTINF:-1 tvg-id="17233265984e83c5ef5947" tvg-name="BEST KOMEDI .b" tvg-logo="" group-title="Film",BEST KOMEDI .b
@@ -429,8 +421,6 @@ https://vavoo.to/vavoo-iptv/play/94298722454d1a7fefabb
 https://vavoo.to/vavoo-iptv/play/21977479648205db1b3061
 #EXTINF:-1 tvg-id="22440690938318303270a5" tvg-name="BEIN MOVIES PREMIERE 2 .c" tvg-logo="https://i.imgur.com/4Uuxk4T.png" group-title="Film",BEIN MOVIES PREMIERE 2 .c
 https://vavoo.to/vavoo-iptv/play/22440690938318303270a5
-#EXTINF:-1 tvg-id="2120218356a82436bd0e59" tvg-name="BEIN MOVIES PREMIERE 2 .s" tvg-logo="https://i.imgur.com/4Uuxk4T.png" group-title="Film",BEIN MOVIES PREMIERE 2 .s
-https://vavoo.to/vavoo-iptv/play/2120218356a82436bd0e59
 #EXTINF:-1 tvg-id="250091316466da3ef72786" tvg-name="BEIN MOVIES STARS .c" tvg-logo="https://i.imgur.com/eryPkrT.png" group-title="Film",BEIN MOVIES STARS .c
 https://vavoo.to/vavoo-iptv/play/250091316466da3ef72786
 #EXTINF:-1 tvg-id="19637487849304979bfdcb" tvg-name="BEIN MOVIES STARS .s" tvg-logo="https://i.imgur.com/eryPkrT.png" group-title="Film",BEIN MOVIES STARS .s
@@ -449,8 +439,6 @@ https://vavoo.to/vavoo-iptv/play/1249271114781b9186b725
 https://vavoo.to/vavoo-iptv/play/1668144911142c3ab6cc28
 #EXTINF:-1 tvg-id="341367210335f81e9e7146" tvg-name="BEIN SERIES DRAMA .c" tvg-logo="https://i.imgur.com/eRSAkFZ.png" group-title="Dizi",BEIN SERIES DRAMA .c
 https://vavoo.to/vavoo-iptv/play/341367210335f81e9e7146
-#EXTINF:-1 tvg-id="727975195a22d80d147d6" tvg-name="BEIN SERIES DRAMA .s" tvg-logo="https://i.imgur.com/eRSAkFZ.png" group-title="Dizi",BEIN SERIES DRAMA .s
-https://vavoo.to/vavoo-iptv/play/727975195a22d80d147d6
 #EXTINF:-1 tvg-id="3016529666fa8445d49f2d" tvg-name="BEIN SERIES SCI-FI .s" tvg-logo="https://i.imgur.com/kfbWKod.png" group-title="Dizi",BEIN SERIES SCI-FI .s
 https://vavoo.to/vavoo-iptv/play/3016529666fa8445d49f2d
 #EXTINF:-1 tvg-id="11255232621b7b0443ab0d" tvg-name="BEIN SERIES VICE .s" tvg-logo="https://i.imgur.com/hgWKp9a.png" group-title="Dizi",BEIN SERIES VICE .s
@@ -547,10 +535,6 @@ https://vavoo.to/vavoo-iptv/play/31561783590bdea7d4bf69
 https://vavoo.to/vavoo-iptv/play/2238665354014ee25dcf7
 #EXTINF:-1 tvg-id="BloombergHT.tr@SD" tvg-name="BLOOMBERG HT HD .b" tvg-logo="https://i.imgur.com/bmkXfIE.png" group-title="Haber",BLOOMBERG HT HD .b
 https://vavoo.to/vavoo-iptv/play/236989031b5bce3e87ca9
-#EXTINF:-1 tvg-id="BloombergHT.tr@SD" tvg-name="BLOOMBERG HT HD+ SD .b" tvg-logo="https://i.imgur.com/bmkXfIE.png" group-title="Haber",BLOOMBERG HT HD+ SD .b
-https://vavoo.to/vavoo-iptv/play/2563486225460803675883
-#EXTINF:-1 tvg-id="1753590086d14bf2945f0e" tvg-name="BONUS MASAL DIYARI .b" tvg-logo="" group-title="Çocuk",BONUS MASAL DIYARI .b
-https://vavoo.to/vavoo-iptv/play/1753590086d14bf2945f0e
 #EXTINF:-1 tvg-id="2703864948c3ea529a2063" tvg-name="BOOBA TV .b" tvg-logo="" group-title="Çocuk",BOOBA TV .b
 https://vavoo.to/vavoo-iptv/play/2703864948c3ea529a2063
 #EXTINF:-1 tvg-id="29439742084c66e3a8bcec" tvg-name="BOOMERANG .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Boomerang_2014_logo.svg/960px-Boomerang_2014_logo.svg.png" group-title="Çocuk",BOOMERANG .s
@@ -559,16 +543,10 @@ https://vavoo.to/vavoo-iptv/play/29439742084c66e3a8bcec
 https://vavoo.to/vavoo-iptv/play/11743931b356e8661a4d
 #EXTINF:-1 tvg-id="BRT1.cy@SD" tvg-name="BRT 1 .c" tvg-logo="https://logo.huhu.to/logo?c=2793254316.png" group-title="Ulusal",BRT 1 .c
 https://vavoo.to/vavoo-iptv/play/2793254316da8e310eaaf8
-#EXTINF:-1 tvg-id="BRT1.cy@SD" tvg-name="BRT 1 .s" tvg-logo="" group-title="Ulusal",BRT 1 .s
-https://vavoo.to/vavoo-iptv/play/364095191839fa6d57aead
-#EXTINF:-1 tvg-id="BRT1.cy@SD" tvg-name="BRT 1 RAW .b" tvg-logo="" group-title="Ulusal",BRT 1 RAW .b
-https://vavoo.to/vavoo-iptv/play/2667659514909fbe1801e3
 #EXTINF:-1 tvg-id="37894122206a5d105c20d3" tvg-name="BRT 2 .c" tvg-logo="https://logo.huhu.to/logo?c=3789412220.png" group-title="Ulusal",BRT 2 .c
 https://vavoo.to/vavoo-iptv/play/37894122206a5d105c20d3
 #EXTINF:-1 tvg-id="26616132460497e495a648" tvg-name="BRT 2 .s" tvg-logo="" group-title="Ulusal",BRT 2 .s
 https://vavoo.to/vavoo-iptv/play/26616132460497e495a648
-#EXTINF:-1 tvg-id="2794224703b2cc3f4b330e" tvg-name="BRT 2 RAW .b" tvg-logo="" group-title="Ulusal",BRT 2 RAW .b
-https://vavoo.to/vavoo-iptv/play/2794224703b2cc3f4b330e
 #EXTINF:-1 tvg-id="BRT3.cy@SD" tvg-name="BRT 3 .c" tvg-logo="https://logo.huhu.to/logo?c=3703439052.png" group-title="Ulusal",BRT 3 .c
 https://vavoo.to/vavoo-iptv/play/3703439052c33e853fc9e9
 #EXTINF:-1 tvg-id="134086061839e644f1eaa" tvg-name="BRTV .c" tvg-logo="https://i.imgur.com/U3qlEAp.png" group-title="Ulusal",BRTV .c
@@ -579,8 +557,6 @@ https://vavoo.to/vavoo-iptv/play/910953672551cfa880ee0
 https://vavoo.to/vavoo-iptv/play/2224047651b7df1fd1adc5
 #EXTINF:-1 tvg-id="25407700892aa536e1a9ff" tvg-name="BIR TV .c" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="Yerel",BIR TV .c
 https://vavoo.to/vavoo-iptv/play/25407700892aa536e1a9ff
-#EXTINF:-1 tvg-id="182252574160a3b3c54187" tvg-name="CAN TV .b" tvg-logo="https://i.imgur.com/oIMtuwB.png" group-title="Yerel",CAN TV .b
-https://vavoo.to/vavoo-iptv/play/182252574160a3b3c54187
 #EXTINF:-1 tvg-id="3900702315d5891138ec1d" tvg-name="CAN TV .c" tvg-logo="https://i.imgur.com/oIMtuwB.png" group-title="Yerel",CAN TV .c
 https://vavoo.to/vavoo-iptv/play/3900702315d5891138ec1d
 #EXTINF:-1 tvg-id="37370371587d37e629c448" tvg-name="CANIM KARDESIM TV .b" tvg-logo="" group-title="Çocuk",CANIM KARDESIM TV .b
@@ -593,16 +569,12 @@ https://vavoo.to/vavoo-iptv/play/178755989915511fee27c
 https://vavoo.to/vavoo-iptv/play/26509164417c662aa52778
 #EXTINF:-1 tvg-id="4090316698975ac8a762bd" tvg-name="CAY TV .s" tvg-logo="https://i.imgur.com/ndupxwu.png" group-title="Yerel",CAY TV .s
 https://vavoo.to/vavoo-iptv/play/4090316698975ac8a762bd
-#EXTINF:-1 tvg-id="4090316698975ac8a762bd" tvg-name="CAY TV .s" tvg-logo="https://i.imgur.com/ndupxwu.png" group-title="Yerel",CAY TV .s
-https://vavoo.to/vavoo-iptv/play/4090316698975ac8a762bd
 #EXTINF:-1 tvg-id="4136709820104f9b927f66" tvg-name="CAILLOU .c" tvg-logo="https://logo.huhu.to/logo?c=4136709820.png" group-title="Çocuk",CAILLOU .c
 https://vavoo.to/vavoo-iptv/play/4136709820104f9b927f66
 #EXTINF:-1 tvg-id="24628387059d91397376ea" tvg-name="CAILLOU TV .b" tvg-logo="" group-title="Çocuk",CAILLOU TV .b
 https://vavoo.to/vavoo-iptv/play/24628387059d91397376ea
 #EXTINF:-1 tvg-id="36262892309c36be6d6419" tvg-name="CAILLOU TV .s" tvg-logo="" group-title="Çocuk",CAILLOU TV .s
 https://vavoo.to/vavoo-iptv/play/36262892309c36be6d6419
-#EXTINF:-1 tvg-id="267285118531e87b6ae01d" tvg-name="CBEEBIES HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/1/16/CBeebies.svg/960px-CBeebies.svg.png" group-title="Çocuk",CBEEBIES HD .b
-https://vavoo.to/vavoo-iptv/play/267285118531e87b6ae01d
 #EXTINF:-1 tvg-id="145648263137480837677c" tvg-name="CEM TV .s" tvg-logo="https://i.imgur.com/x5YNUfz.png" group-title="Dini",CEM TV .s
 https://vavoo.to/vavoo-iptv/play/145648263137480837677c
 #EXTINF:-1 tvg-id="18715210871230ecf990b4" tvg-name="CENGIZ KURTOGLU .b" tvg-logo="" group-title="Müzik",CENGIZ KURTOGLU .b
@@ -621,6 +593,10 @@ https://vavoo.to/vavoo-iptv/play/41338152650143743f9d7
 https://vavoo.to/vavoo-iptv/play/3278683973d0eaa4e57d76
 #EXTINF:-1 tvg-id="CNNTurk.tr@SD" tvg-name="CNN TURK HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/CNN_T%C3%BCrk_logo.svg/960px-CNN_T%C3%BCrk_logo.svg.png" group-title="Haber",CNN TURK HD .b
 https://vavoo.to/vavoo-iptv/play/427315396743dfe9212c50
+#EXTINF:-1 tvg-id="CNNTurk.tr@SD" tvg-name="CNN TURK HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/CNN_T%C3%BCrk_logo.svg/960px-CNN_T%C3%BCrk_logo.svg.png" group-title="Haber",CNN TURK HD .b
+https://vavoo.to/vavoo-iptv/play/427315396743dfe9212c50
+#EXTINF:-1 tvg-id="204606561e2a864b42de1" tvg-name="COCUK 1 HD .b" tvg-logo="" group-title="Çocuk",COCUK 1 HD .b
+https://vavoo.to/vavoo-iptv/play/204606561e2a864b42de1
 #EXTINF:-1 tvg-id="204606561e2a864b42de1" tvg-name="COCUK 1 HD .b" tvg-logo="" group-title="Çocuk",COCUK 1 HD .b
 https://vavoo.to/vavoo-iptv/play/204606561e2a864b42de1
 #EXTINF:-1 tvg-id="21934273300186e4b0974f" tvg-name="COCUK 2 HD .b" tvg-logo="" group-title="Çocuk",COCUK 2 HD .b
@@ -631,12 +607,16 @@ https://vavoo.to/vavoo-iptv/play/1310133020ac356e7be28a
 https://vavoo.to/vavoo-iptv/play/3892774129e556db3be974
 #EXTINF:-1 tvg-id="8310527316ed669cb8b77" tvg-name="CINE 1 .c" tvg-logo="" group-title="Film",CINE 1 .c
 https://vavoo.to/vavoo-iptv/play/8310527316ed669cb8b77
+#EXTINF:-1 tvg-id="2660902091c248c72d0cd6" tvg-name="D Ğ N TV (GERMANY) .b" tvg-logo="" group-title="Ulusal",D Ğ N TV (GERMANY) .b
+https://vavoo.to/vavoo-iptv/play/2660902091c248c72d0cd6
 #EXTINF:-1 tvg-id="3983067532b2b6b5e2298f" tvg-name="DA VINC KIDS HD .b" tvg-logo="" group-title="Çocuk",DA VINC KIDS HD .b
 https://vavoo.to/vavoo-iptv/play/3983067532b2b6b5e2298f
+#EXTINF:-1 tvg-id="DaVinci.de@SD" tvg-name="DA VINCI LEARNING .s" tvg-logo="" group-title="Belgesel",DA VINCI LEARNING .s
+https://vavoo.to/vavoo-iptv/play/1268465409d81cf808f3af
+#EXTINF:-1 tvg-id="5746975234c4c28f5dbe1" tvg-name="DEHA TV .s" tvg-logo="https://i.imgur.com/Dlsm9XP.png" group-title="Yerel",DEHA TV .s
+https://vavoo.to/vavoo-iptv/play/5746975234c4c28f5dbe1
 #EXTINF:-1 tvg-id="183207521594fc65b3f956" tvg-name="DENIZ POSTASI TV .c" tvg-logo="https://i.imgur.com/Mm8hdfx.png" group-title="Yerel",DENIZ POSTASI TV .c
 https://vavoo.to/vavoo-iptv/play/183207521594fc65b3f956
-#EXTINF:-1 tvg-id="23018905930073141351c" tvg-name="DENIZLI DEHA TV .b" tvg-logo="" group-title="Yerel",DENIZLI DEHA TV .b
-https://vavoo.to/vavoo-iptv/play/23018905930073141351c
 #EXTINF:-1 tvg-id="40223592760f0af9f37d41" tvg-name="DHA .c" tvg-logo="https://i.imgur.com/VZhag2x.png" group-title="Haber",DHA .c
 https://vavoo.to/vavoo-iptv/play/40223592760f0af9f37d41
 #EXTINF:-1 tvg-id="67e5c4c6cfef0b3744c556fa" tvg-name="DMAX .c" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/DMAX_BLACK.svg/960px-DMAX_BLACK.svg.png" group-title="Belgesel",DMAX .c
@@ -669,8 +649,12 @@ https://vavoo.to/vavoo-iptv/play/3968360733afa6795a0a87
 https://vavoo.to/vavoo-iptv/play/2759159211bf8b5c4a304d
 #EXTINF:-1 tvg-id="385304349522b5e6fe1462" tvg-name="DREAM BEIN OFFICE 10 .b" tvg-logo="" group-title="Film",DREAM BEIN OFFICE 10 .b
 https://vavoo.to/vavoo-iptv/play/385304349522b5e6fe1462
+#EXTINF:-1 tvg-id="382239321182403c667cfc" tvg-name="DREAM BEIN OFFICE 2 .b" tvg-logo="" group-title="Film",DREAM BEIN OFFICE 2 .b
+https://vavoo.to/vavoo-iptv/play/382239321182403c667cfc
 #EXTINF:-1 tvg-id="373642004344d287985a44" tvg-name="DREAM BEIN OFFICE 3 .b" tvg-logo="" group-title="Film",DREAM BEIN OFFICE 3 .b
 https://vavoo.to/vavoo-iptv/play/373642004344d287985a44
+#EXTINF:-1 tvg-id="1821762267544ae2fe57ce" tvg-name="DREAM BEIN OFFICE 4 .b" tvg-logo="" group-title="Film",DREAM BEIN OFFICE 4 .b
+https://vavoo.to/vavoo-iptv/play/1821762267544ae2fe57ce
 #EXTINF:-1 tvg-id="1375062891fd10d8fd2891" tvg-name="DREAM BEIN OFFICE 5 .b" tvg-logo="" group-title="Film",DREAM BEIN OFFICE 5 .b
 https://vavoo.to/vavoo-iptv/play/1375062891fd10d8fd2891
 #EXTINF:-1 tvg-id="374714811264e77de4f16" tvg-name="DREAM BEIN OFFICE 6 .b" tvg-logo="" group-title="Film",DREAM BEIN OFFICE 6 .b
@@ -747,16 +731,16 @@ https://vavoo.to/vavoo-iptv/play/10475251689d5a1f09d886
 https://vavoo.to/vavoo-iptv/play/541406431f598c1d4030c
 #EXTINF:-1 tvg-id="3079995901347079e2f045" tvg-name="DISCOVERY CHANNEL .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png" group-title="Belgesel",DISCOVERY CHANNEL .s
 https://vavoo.to/vavoo-iptv/play/3079995901347079e2f045
-#EXTINF:-1 tvg-id="6957057788f10364acdac" tvg-name="DISCOVERY CHANNEL HD+ .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/2019_Discovery_logo.svg/960px-2019_Discovery_logo.svg.png" group-title="Belgesel",DISCOVERY CHANNEL HD+ .b
-https://vavoo.to/vavoo-iptv/play/6957057788f10364acdac
 #EXTINF:-1 tvg-id="DISCOVERY.SCIENCE.HD.tr" tvg-name="DISCOVERY SCIENCE .c" tvg-logo="https://logo.huhu.to/logo?c=1013220447.png" group-title="Belgesel",DISCOVERY SCIENCE .c
 https://vavoo.to/vavoo-iptv/play/10132204470a3c3b52576d
 #EXTINF:-1 tvg-id="DISCOVERY.SCIENCE.HD.tr" tvg-name="DISCOVERY SCIENCE .s" tvg-logo="" group-title="Belgesel",DISCOVERY SCIENCE .s
 https://vavoo.to/vavoo-iptv/play/369885232360b4a1528ab4
+#EXTINF:-1 tvg-id="DISCOVERY.SCIENCE.HD.tr" tvg-name="DISCOVERY SCIENCE HD+ .b" tvg-logo="" group-title="Belgesel",DISCOVERY SCIENCE HD+ .b
+https://vavoo.to/vavoo-iptv/play/2818684271ea7ddc0e09ff
 #EXTINF:-1 tvg-id="3624002307d3a1f474d7ce" tvg-name="DISCOVERY WORLD .c" tvg-logo="https://logo.huhu.to/logo?c=3624002307.png" group-title="Belgesel",DISCOVERY WORLD .c
 https://vavoo.to/vavoo-iptv/play/3624002307d3a1f474d7ce
-#EXTINF:-1 tvg-id="InvestigationDiscoveryEurope.us@SD" tvg-name="DISCOVERY ID .s" tvg-logo="" group-title="Belgesel",DISCOVERY ID .s
-https://vavoo.to/vavoo-iptv/play/972730032fe506471c990
+#EXTINF:-1 tvg-id="InvestigationDiscoveryEurope.us@SD" tvg-name="DISCOVERY ID .b" tvg-logo="" group-title="Belgesel",DISCOVERY ID .b
+https://vavoo.to/vavoo-iptv/play/20954040600611bde9e160
 #EXTINF:-1 tvg-id="9700986623c97a7651f69" tvg-name="DISCOVERY IDX HD .b" tvg-logo="" group-title="Belgesel",DISCOVERY IDX HD .b
 https://vavoo.to/vavoo-iptv/play/9700986623c97a7651f69
 #EXTINF:-1 tvg-id="DISNEY.CHANNEL.tr" tvg-name="DISNEY CHANNEL .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3d/2022_Disney_Channel_logo.svg" group-title="Çocuk",DISNEY CHANNEL .s
@@ -765,8 +749,6 @@ https://vavoo.to/vavoo-iptv/play/1161899432db055970dd1d
 https://vavoo.to/vavoo-iptv/play/3578544716a4cc42d03dcd
 #EXTINF:-1 tvg-id="396367809728cc9e22209f" tvg-name="DISNEY JR .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="Çocuk",DISNEY JR .s
 https://vavoo.to/vavoo-iptv/play/396367809728cc9e22209f
-#EXTINF:-1 tvg-id="4108765291d43a8a0a8088" tvg-name="DISNEY JR HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="Çocuk",DISNEY JR HD .b
-https://vavoo.to/vavoo-iptv/play/4108765291d43a8a0a8088
 #EXTINF:-1 tvg-id="1772892321058f7001d327" tvg-name="DISNEY JR HD+ .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e3/2024_Disney_Jr._Logo.svg" group-title="Çocuk",DISNEY JR HD+ .b
 https://vavoo.to/vavoo-iptv/play/1772892321058f7001d327
 #EXTINF:-1 tvg-id="34228536805e87ad5629aa" tvg-name="DISNEY XD HD .b" tvg-logo="" group-title="Çocuk",DISNEY XD HD .b
@@ -797,6 +779,8 @@ https://vavoo.to/vavoo-iptv/play/215449252887e52acd6803
 https://vavoo.to/vavoo-iptv/play/658726604ae88a8e690ef
 #EXTINF:-1 tvg-id="2156922182c4160baf6fa4" tvg-name="EFKAR FM CANLI RADYO .b" tvg-logo="" group-title="Radyo",EFKAR FM CANLI RADYO .b
 https://vavoo.to/vavoo-iptv/play/2156922182c4160baf6fa4
+#EXTINF:-1 tvg-id="4225938876155a05d54219" tvg-name="EGE TURK TV .b" tvg-logo="https://i.imgur.com/TLUKrMb.png" group-title="Yerel",EGE TURK TV .b
+https://vavoo.to/vavoo-iptv/play/4225938876155a05d54219
 #EXTINF:-1 tvg-id="36508969020f6d070f25ea" tvg-name="EGE ILE GAGA .b" tvg-logo="" group-title="Yaşam",EGE ILE GAGA .b
 https://vavoo.to/vavoo-iptv/play/36508969020f6d070f25ea
 #EXTINF:-1 tvg-id="2625879722d77e234c308c" tvg-name="EGE ILE GAGA .s" tvg-logo="" group-title="Yaşam",EGE ILE GAGA .s
@@ -867,8 +851,8 @@ https://vavoo.to/vavoo-iptv/play/1736962708902f1c3b6ce3
 https://vavoo.to/vavoo-iptv/play/1670462361617c4d6f0099
 #EXTINF:-1 tvg-id="22071045493785e57aaf9a" tvg-name="ES TV (ESKISEHIR) .s" tvg-logo="https://i.imgur.com/epAEBrp.png" group-title="Yerel",ES TV (ESKISEHIR) .s
 https://vavoo.to/vavoo-iptv/play/22071045493785e57aaf9a
-#EXTINF:-1 tvg-id="1218353983e56ceae753c3" tvg-name="ETV KAYSERI .c" tvg-logo="https://yt3.googleusercontent.com/ytc/AIdro_msPtG6zfPKIJIIdvG4dehXLoVoXcHM2-2HL9YxsNYzGQ=s512-c-k-c0x00ffffff-no-rj" group-title="Yerel",ETV KAYSERI .c
-https://vavoo.to/vavoo-iptv/play/1218353983e56ceae753c3
+#EXTINF:-1 tvg-id="409014197869da0d767e2b" tvg-name="ESK EH R KANAL 26 .b" tvg-logo="" group-title="Yerel",ESK EH R KANAL 26 .b
+https://vavoo.to/vavoo-iptv/play/409014197869da0d767e2b
 #EXTINF:-1 tvg-id="20249540025118ba1bc88c" tvg-name="ETV MANISA .c" tvg-logo="https://i.ibb.co/QKXtdkz/sOd3INg.png" group-title="Yerel",ETV MANISA .c
 https://vavoo.to/vavoo-iptv/play/20249540025118ba1bc88c
 #EXTINF:-1 tvg-id="EuroD.tr@SD" tvg-name="EURO D .b" tvg-logo="https://i.imgur.com/x9kHsXo.png" group-title="Ulusal",EURO D .b
@@ -919,14 +903,20 @@ https://vavoo.to/vavoo-iptv/play/1624937917c024524dfe03
 https://vavoo.to/vavoo-iptv/play/2426097659dac0cbc72851
 #EXTINF:-1 tvg-id="1208369995ee56db60c6cb" tvg-name="EXXEN TV SPOR 1 .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 1 .b
 https://vavoo.to/vavoo-iptv/play/1208369995ee56db60c6cb
+#EXTINF:-1 tvg-id="3333902867e8eeb6c13355" tvg-name="EXXEN TV SPOR 1 720P .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 1 720P .b
+https://vavoo.to/vavoo-iptv/play/3333902867e8eeb6c13355
 #EXTINF:-1 tvg-id="10914039127b6d2cb4f9b1" tvg-name="EXXEN TV SPOR 1 FEED .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 1 FEED .b
 https://vavoo.to/vavoo-iptv/play/10914039127b6d2cb4f9b1
 #EXTINF:-1 tvg-id="12042008015aa1fc47965f" tvg-name="EXXEN TV SPOR 1 HD .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 1 HD .b
 https://vavoo.to/vavoo-iptv/play/12042008015aa1fc47965f
 #EXTINF:-1 tvg-id="3814925371b27457afc78f" tvg-name="EXXEN TV SPOR 1 UHD .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 1 UHD .b
 https://vavoo.to/vavoo-iptv/play/3814925371b27457afc78f
+#EXTINF:-1 tvg-id="3377046146a9c27858fc04" tvg-name="EXXEN TV SPOR 2 HD .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 2 HD .b
+https://vavoo.to/vavoo-iptv/play/3377046146a9c27858fc04
 #EXTINF:-1 tvg-id="3673037054bbf23da360dd" tvg-name="EXXEN TV SPOR 2 UHD .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 2 UHD .b
 https://vavoo.to/vavoo-iptv/play/3673037054bbf23da360dd
+#EXTINF:-1 tvg-id="851841067026eb6346001" tvg-name="EXXEN TV SPOR 3 .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 3 .b
+https://vavoo.to/vavoo-iptv/play/851841067026eb6346001
 #EXTINF:-1 tvg-id="21626092115c96093842ed" tvg-name="EXXEN TV SPOR 4 .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 4 .b
 https://vavoo.to/vavoo-iptv/play/21626092115c96093842ed
 #EXTINF:-1 tvg-id="3179734411cc8e59810aba" tvg-name="EXXEN TV SPOR 5 .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 5 .b
@@ -937,6 +927,8 @@ https://vavoo.to/vavoo-iptv/play/4196835163f7f34378737d
 https://vavoo.to/vavoo-iptv/play/3343300331c5663b93a430
 #EXTINF:-1 tvg-id="11590782026618befbb16b" tvg-name="EXXEN TV SPOR 8 .b" tvg-logo="" group-title="Spor",EXXEN TV SPOR 8 .b
 https://vavoo.to/vavoo-iptv/play/11590782026618befbb16b
+#EXTINF:-1 tvg-id="FashionTVEurope.fr@SD" tvg-name="FASHION TV .c" tvg-logo="" group-title="Yaşam",FASHION TV .c
+https://vavoo.to/vavoo-iptv/play/348214914537ec7e902850
 #EXTINF:-1 tvg-id="3597878428da15fa9fa57e" tvg-name="FASIL NEVIZADE GECELERI .b" tvg-logo="" group-title="Dini",FASIL NEVIZADE GECELERI .b
 https://vavoo.to/vavoo-iptv/play/3597878428da15fa9fa57e
 #EXTINF:-1 tvg-id="FBTV.tr@SD" tvg-name="FB TV .b" tvg-logo="https://i.imgur.com/qBVqtYd.png" group-title="Spor",FB TV .b
@@ -947,6 +939,10 @@ https://vavoo.to/vavoo-iptv/play/2308263834c742823cc4ac
 https://vavoo.to/vavoo-iptv/play/3806979011e0d72cfb10fc
 #EXTINF:-1 tvg-id="20273310967517aba18b29" tvg-name="FLASH TV HD .b" tvg-logo="https://i.imgur.com/L0NHKBM.png" group-title="Ulusal",FLASH TV HD .b
 https://vavoo.to/vavoo-iptv/play/20273310967517aba18b29
+#EXTINF:-1 tvg-id="1285510370f329ebb236e7" tvg-name="FM TV .b" tvg-logo="https://i.imgur.com/nCzpHWM.png" group-title="Müzik",FM TV .b
+https://vavoo.to/vavoo-iptv/play/1285510370f329ebb236e7
+#EXTINF:-1 tvg-id="425386382940c3dc27dbf2" tvg-name="FM TV .c" tvg-logo="https://i.imgur.com/nCzpHWM.png" group-title="Müzik",FM TV .c
+https://vavoo.to/vavoo-iptv/play/425386382940c3dc27dbf2
 #EXTINF:-1 tvg-id="3681963823264351faabac" tvg-name="FMTV .b" tvg-logo="" group-title="Radyo",FMTV .b
 https://vavoo.to/vavoo-iptv/play/3681963823264351faabac
 #EXTINF:-1 tvg-id="FOX.HD.tr" tvg-name="FOX .c" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/FOX_wordmark-red.svg/960px-FOX_wordmark-red.svg.png" group-title="Ulusal",FOX .c
@@ -961,8 +957,6 @@ https://vavoo.to/vavoo-iptv/play/382143364970784d990878
 https://vavoo.to/vavoo-iptv/play/28511479911822cfde0005
 #EXTINF:-1 tvg-id="113035273098bcceb3f35a" tvg-name="FILMBOX AKSIYON .s" tvg-logo="" group-title="Film",FILMBOX AKSIYON .s
 https://vavoo.to/vavoo-iptv/play/113035273098bcceb3f35a
-#EXTINF:-1 tvg-id="2089556265d959858b1ebc" tvg-name="FILMBOX COMEDY .s" tvg-logo="" group-title="Film",FILMBOX COMEDY .s
-https://vavoo.to/vavoo-iptv/play/2089556265d959858b1ebc
 #EXTINF:-1 tvg-id="2267707661be2c4fd70fae" tvg-name="FILMBOX FANTASTIC .s" tvg-logo="" group-title="Film",FILMBOX FANTASTIC .s
 https://vavoo.to/vavoo-iptv/play/2267707661be2c4fd70fae
 #EXTINF:-1 tvg-id="32680855471ee2bf28284f" tvg-name="FILMBOX KADIR INANIR .s" tvg-logo="" group-title="Film",FILMBOX KADIR INANIR .s
@@ -997,6 +991,8 @@ https://vavoo.to/vavoo-iptv/play/120360101317419d96022b
 https://vavoo.to/vavoo-iptv/play/3388312836d7abbf5e8b6
 #EXTINF:-1 tvg-id="28430116980561d04db9e1" tvg-name="GAZIANTEP GRT TV .b" tvg-logo="" group-title="Yerel",GAZIANTEP GRT TV .b
 https://vavoo.to/vavoo-iptv/play/28430116980561d04db9e1
+#EXTINF:-1 tvg-id="24135369173688afe711d0" tvg-name="GAZIANTEP OLAY TV .b" tvg-logo="https://i.imgur.com/uUFlrma.png" group-title="Yerel",GAZIANTEP OLAY TV .b
+https://vavoo.to/vavoo-iptv/play/24135369173688afe711d0
 #EXTINF:-1 tvg-id="2456232539a0f9283d418b" tvg-name="GLOBAL BOX ACTION .b" tvg-logo="" group-title="Film",GLOBAL BOX ACTION .b
 https://vavoo.to/vavoo-iptv/play/2456232539a0f9283d418b
 #EXTINF:-1 tvg-id="18280597356594959726c2" tvg-name="GLOBAL BOX COMEDY .b" tvg-logo="" group-title="Film",GLOBAL BOX COMEDY .b
@@ -1047,6 +1043,8 @@ https://vavoo.to/vavoo-iptv/play/32253354543986c7294970
 https://vavoo.to/vavoo-iptv/play/464378170623140c01606
 #EXTINF:-1 tvg-id="HaberturkTV.tr@SD" tvg-name="HABER TURK HD .b" tvg-logo="https://logo.huhu.to/logo?c=2360854158.png" group-title="Haber",HABER TURK HD .b
 https://vavoo.to/vavoo-iptv/play/2360854158813051c3c887
+#EXTINF:-1 tvg-id="HaberturkTV.tr@SD" tvg-name="HABER TURK HEVC .b" tvg-logo="" group-title="Haber",HABER TURK HEVC .b
+https://vavoo.to/vavoo-iptv/play/1857563183bcf218ac2da8
 #EXTINF:-1 tvg-id="HABERTÜRK.tr" tvg-name="HABERTURK .c" tvg-logo="https://logo.huhu.to/logo?c=2402772380.png" group-title="Haber",HABERTURK .c
 https://vavoo.to/vavoo-iptv/play/24027723806f7d250c32c3
 #EXTINF:-1 tvg-id="HABERTÜRK.HD.tr" tvg-name="HABERTURK HD .b" tvg-logo="https://logo.huhu.to/logo?c=1470199900.png" group-title="Haber",HABERTURK HD .b
@@ -1165,6 +1163,8 @@ https://vavoo.to/vavoo-iptv/play/1096791444308425496108
 https://vavoo.to/vavoo-iptv/play/4085283006575fbfb6b120
 #EXTINF:-1 tvg-id="KanalD.tr@SD" tvg-name="KANAL D .c" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="Ulusal",KANAL D .c
 https://vavoo.to/vavoo-iptv/play/38723286086ff52dd7cac
+#EXTINF:-1 tvg-id="KanalD.tr@SD" tvg-name="KANAL D .s" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="Ulusal",KANAL D .s
+https://vavoo.to/vavoo-iptv/play/231583905a5fd80471ac8
 #EXTINF:-1 tvg-id="KanalD.tr@SD" tvg-name="KANAL D HD .b" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="Ulusal",KANAL D HD .b
 https://vavoo.to/vavoo-iptv/play/113044193323e36b85a648
 #EXTINF:-1 tvg-id="KanalD.tr@SD" tvg-name="KANAL D HEVC .b" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="Ulusal",KANAL D HEVC .b
@@ -1225,12 +1225,12 @@ https://vavoo.to/vavoo-iptv/play/158799585456f0116e352b
 https://vavoo.to/vavoo-iptv/play/363891195433c45cb68fe2
 #EXTINF:-1 tvg-id="37593642738038d993fa1e" tvg-name="KONYA KON TV .b" tvg-logo="" group-title="Yerel",KONYA KON TV .b
 https://vavoo.to/vavoo-iptv/play/37593642738038d993fa1e
-#EXTINF:-1 tvg-id="5783808618f2bafca5dba" tvg-name="KONYA OLAY TV .c" tvg-logo="https://www.konyaolaytv.com/upload/tema/20230307__5154687762.jpg" group-title="Yerel",KONYA OLAY TV .c
-https://vavoo.to/vavoo-iptv/play/5783808618f2bafca5dba
 #EXTINF:-1 tvg-id="277878129786cfb72a8e2e" tvg-name="KOSTEBEKGILLER TV .b" tvg-logo="" group-title="Çocuk",KOSTEBEKGILLER TV .b
 https://vavoo.to/vavoo-iptv/play/277878129786cfb72a8e2e
 #EXTINF:-1 tvg-id="685300988b10d8590b08d" tvg-name="KOY TV .s" tvg-logo="https://i.imgur.com/RcjEHAG.png" group-title="Yerel",KOY TV .s
 https://vavoo.to/vavoo-iptv/play/685300988b10d8590b08d
+#EXTINF:-1 tvg-id="1047804470f83375a3863a" tvg-name="KOZA TV .c" tvg-logo="https://i.imgur.com/jeFTUGp.png" group-title="Yerel",KOZA TV .c
+https://vavoo.to/vavoo-iptv/play/1047804470f83375a3863a
 #EXTINF:-1 tvg-id="358503385607b86bf71c43" tvg-name="KRAL FM .b" tvg-logo="" group-title="Radyo",KRAL FM .b
 https://vavoo.to/vavoo-iptv/play/358503385607b86bf71c43
 #EXTINF:-1 tvg-id="222080778325a1bcf07f54" tvg-name="KRAL FM ARABESK .b" tvg-logo="" group-title="Radyo",KRAL FM ARABESK .b
@@ -1441,8 +1441,6 @@ https://vavoo.to/vavoo-iptv/play/2462143546905b09fb80ad
 https://vavoo.to/vavoo-iptv/play/35138675369ae6fbf4e941
 #EXTINF:-1 tvg-id="NOWTV.tr@SD" tvg-name="NOW .c" tvg-logo="" group-title="Ulusal",NOW .c
 https://vavoo.to/vavoo-iptv/play/31051840561fc5d2fb58a5
-#EXTINF:-1 tvg-id="919108696a1b98997373b" tvg-name="NOW TV FHD .b" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Ulusal",NOW TV FHD .b
-https://vavoo.to/vavoo-iptv/play/919108696a1b98997373b
 #EXTINF:-1 tvg-id="9989683045db00316f92d" tvg-name="NOW TV HD (H265) .b" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Ulusal",NOW TV HD (H265) .b
 https://vavoo.to/vavoo-iptv/play/9989683045db00316f92d
 #EXTINF:-1 tvg-id="161305206673e7c4b7739" tvg-name="NOW TV HD .b" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Ulusal",NOW TV HD .b
@@ -1545,18 +1543,12 @@ https://vavoo.to/vavoo-iptv/play/7315857755d4bda0ebfec
 https://vavoo.to/vavoo-iptv/play/198132618c765e006ed00
 #EXTINF:-1 tvg-id="4234416466b6878ac343d7" tvg-name="POWER DANCE .c" tvg-logo="https://i.imgur.com/QpPteBO.png" group-title="Müzik",POWER DANCE .c
 https://vavoo.to/vavoo-iptv/play/4234416466b6878ac343d7
-#EXTINF:-1 tvg-id="1299417291527618a1ccab" tvg-name="POWER FM YABANCI M ZIK .b" tvg-logo="" group-title="Radyo",POWER FM YABANCI M ZIK .b
-https://vavoo.to/vavoo-iptv/play/1299417291527618a1ccab
 #EXTINF:-1 tvg-id="23667904081b95cae45de4" tvg-name="POWER HD .b" tvg-logo="" group-title="Müzik",POWER HD .b
 https://vavoo.to/vavoo-iptv/play/23667904081b95cae45de4
 #EXTINF:-1 tvg-id="178350880905c3993617e6" tvg-name="POWER LOVE .c" tvg-logo="https://i.imgur.com/0RzUswR.png" group-title="Müzik",POWER LOVE .c
 https://vavoo.to/vavoo-iptv/play/178350880905c3993617e6
-#EXTINF:-1 tvg-id="2703806315a67a7c89a263" tvg-name="POWER T RK T RK E POP .b" tvg-logo="" group-title="Müzik",POWER T RK T RK E POP .b
-https://vavoo.to/vavoo-iptv/play/2703806315a67a7c89a263
 #EXTINF:-1 tvg-id="538668348aa4815e4285a" tvg-name="POWER TURK .s" tvg-logo="" group-title="Müzik",POWER TURK .s
 https://vavoo.to/vavoo-iptv/play/538668348aa4815e4285a
-#EXTINF:-1 tvg-id="714196738c6888433546f" tvg-name="POWER TURK HD .b" tvg-logo="" group-title="Müzik",POWER TURK HD .b
-https://vavoo.to/vavoo-iptv/play/714196738c6888433546f
 #EXTINF:-1 tvg-id="17666236897fc019f2aef" tvg-name="POWER TURK TV .c" tvg-logo="https://logo.huhu.to/logo?c=176662368.png" group-title="Müzik",POWER TURK TV .c
 https://vavoo.to/vavoo-iptv/play/17666236897fc019f2aef
 #EXTINF:-1 tvg-id="POWER.TV.HD.tr" tvg-name="POWER TV .c" tvg-logo="https://i.imgur.com/XSL1gd7.png" group-title="Müzik",POWER TV .c
@@ -1609,8 +1601,6 @@ https://vavoo.to/vavoo-iptv/play/3728165823dca073d0a662
 https://vavoo.to/vavoo-iptv/play/201547123838d9856084ec
 #EXTINF:-1 tvg-id="349052544410354f05ef9" tvg-name="PISI TV .b" tvg-logo="" group-title="Çocuk",PISI TV .b
 https://vavoo.to/vavoo-iptv/play/349052544410354f05ef9
-#EXTINF:-1 tvg-id="536559220e5347db638cf" tvg-name="RADIO ROCK .b" tvg-logo="" group-title="Radyo",RADIO ROCK .b
-https://vavoo.to/vavoo-iptv/play/536559220e5347db638cf
 #EXTINF:-1 tvg-id="28347595794ed594f88740" tvg-name="RAFADAN TAYFA .b" tvg-logo="" group-title="Çocuk",RAFADAN TAYFA .b
 https://vavoo.to/vavoo-iptv/play/28347595794ed594f88740
 #EXTINF:-1 tvg-id="2087444701eef4beb29a64" tvg-name="REAL BOX ACTION .c" tvg-logo="" group-title="Film",REAL BOX ACTION .c
@@ -1627,14 +1617,10 @@ https://vavoo.to/vavoo-iptv/play/41523547590dd3ad7182e1
 https://vavoo.to/vavoo-iptv/play/1959665596c53ccefb734a
 #EXTINF:-1 tvg-id="4239242367fb52ed133368" tvg-name="REHBER TV .c" tvg-logo="https://i.imgur.com/fpkaw78.png" group-title="Dini",REHBER TV .c
 https://vavoo.to/vavoo-iptv/play/4239242367fb52ed133368
-#EXTINF:-1 tvg-id="34152992586965d75e9ba0" tvg-name="RETRO T RK T RK E KLASIK .b" tvg-logo="" group-title="Müzik",RETRO T RK T RK E KLASIK .b
-https://vavoo.to/vavoo-iptv/play/34152992586965d75e9ba0
 #EXTINF:-1 tvg-id="399798825472229f330730" tvg-name="RUMELI TV .c" tvg-logo="https://i.imgur.com/xpRPX3a.png" group-title="Diğer",RUMELI TV .c
 https://vavoo.to/vavoo-iptv/play/399798825472229f330730
 #EXTINF:-1 tvg-id="28980136277243b68661a6" tvg-name="RUYA TRENI .b" tvg-logo="" group-title="Çocuk",RUYA TRENI .b
 https://vavoo.to/vavoo-iptv/play/28980136277243b68661a6
-#EXTINF:-1 tvg-id="460410710474124d4550a" tvg-name="S PER FM T RK E POP .b" tvg-logo="" group-title="Radyo",S PER FM T RK E POP .b
-https://vavoo.to/vavoo-iptv/play/460410710474124d4550a
 #EXTINF:-1 tvg-id="SSport.tr@SD" tvg-name="S SPORT .c" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="Spor",S SPORT .c
 https://vavoo.to/vavoo-iptv/play/33465497225b9857743b71
 #EXTINF:-1 tvg-id="SSport.tr@SD" tvg-name="S SPORT .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/a/a9/S_Sport_logo1.png" group-title="Spor",S SPORT .s
@@ -1645,6 +1631,8 @@ https://vavoo.to/vavoo-iptv/play/1313768516926dc999c43b
 https://vavoo.to/vavoo-iptv/play/1234604880d226de6d47be
 #EXTINF:-1 tvg-id="1507829436cb5aa4fb5b34" tvg-name="S SPORT+4 MAC SAATI .b" tvg-logo="https://logo.huhu.to/logo?c=1507829436.png" group-title="Spor",S SPORT+4 MAC SAATI .b
 https://vavoo.to/vavoo-iptv/play/1507829436cb5aa4fb5b34
+#EXTINF:-1 tvg-id="376048776421ffc14b9074" tvg-name="S SPORT+5 MAC SAATI .b" tvg-logo="https://logo.huhu.to/logo?c=3760487764.png" group-title="Spor",S SPORT+5 MAC SAATI .b
+https://vavoo.to/vavoo-iptv/play/376048776421ffc14b9074
 #EXTINF:-1 tvg-id="3531762195c7260405eaad" tvg-name="S-SPORT 1 UHD .b" tvg-logo="https://logo.huhu.to/logo?c=3531762195.png" group-title="Spor",S-SPORT 1 UHD .b
 https://vavoo.to/vavoo-iptv/play/3531762195c7260405eaad
 #EXTINF:-1 tvg-id="1183409452148e7cb0f613" tvg-name="S-SPORT 2 HD .b" tvg-logo="https://i.imgur.com/2jIItAy.png" group-title="Spor",S-SPORT 2 HD .b
@@ -1729,12 +1717,8 @@ https://vavoo.to/vavoo-iptv/play/237609064654251acc3bd9
 https://vavoo.to/vavoo-iptv/play/3343868905cee63de46df4
 #EXTINF:-1 tvg-id="42280465621064ebc15bba" tvg-name="SAT 7 TÜRK .c" tvg-logo="https://logo.huhu.to/logo?c=4228046562.png" group-title="Dini",SAT 7 TÜRK .c
 https://vavoo.to/vavoo-iptv/play/42280465621064ebc15bba
-#EXTINF:-1 tvg-id="2978732943ad6c3ffd9d10" tvg-name="SAT7 TURK .s" tvg-logo="" group-title="Dini",SAT7 TURK .s
-https://vavoo.to/vavoo-iptv/play/2978732943ad6c3ffd9d10
 #EXTINF:-1 tvg-id="1192565728f635dd56c60f" tvg-name="SATRANÇ TV .c" tvg-logo="" group-title="Dini",SATRANÇ TV .c
 https://vavoo.to/vavoo-iptv/play/1192565728f635dd56c60f
-#EXTINF:-1 tvg-id="4188119721d54405415c0f" tvg-name="SCIENCE & VICE .s" tvg-logo="" group-title="Belgesel",SCIENCE & VICE .s
-https://vavoo.to/vavoo-iptv/play/4188119721d54405415c0f
 #EXTINF:-1 tvg-id="544666238c61b20d0e7a9" tvg-name="SEF ROKKA TV .b" tvg-logo="" group-title="Çocuk",SEF ROKKA TV .b
 https://vavoo.to/vavoo-iptv/play/544666238c61b20d0e7a9
 #EXTINF:-1 tvg-id="133120184802af54b3162c" tvg-name="SEKER HOCA .b" tvg-logo="" group-title="Çocuk",SEKER HOCA .b
@@ -1781,6 +1765,8 @@ https://vavoo.to/vavoo-iptv/play/2395422638d4ff0c834c1d
 https://vavoo.to/vavoo-iptv/play/144949986573359afbfeae
 #EXTINF:-1 tvg-id="ShowTV.tr@SD" tvg-name="SHOW TV HD .b" tvg-logo="https://i.imgur.com/1l7SCCu.png" group-title="Ulusal",SHOW TV HD .b
 https://vavoo.to/vavoo-iptv/play/351471337029c80ca4c64
+#EXTINF:-1 tvg-id="ShowTV.tr@SD" tvg-name="SHOW TV HEVC .b" tvg-logo="https://i.imgur.com/1l7SCCu.png" group-title="Ulusal",SHOW TV HEVC .b
+https://vavoo.to/vavoo-iptv/play/37476469073149a4f729bc
 #EXTINF:-1 tvg-id="1197572527f8384c637ae4" tvg-name="SHOWMAX .b" tvg-logo="https://logo.huhu.to/logo?c=1197572527.png" group-title="Film",SHOWMAX .b
 https://vavoo.to/vavoo-iptv/play/1197572527f8384c637ae4
 #EXTINF:-1 tvg-id="3491525845a8862ff934e0" tvg-name="SL NILOYA .c" tvg-logo="https://logo.huhu.to/logo?c=3491525845.png" group-title="Çocuk",SL NILOYA .c
@@ -1789,8 +1775,6 @@ https://vavoo.to/vavoo-iptv/play/3491525845a8862ff934e0
 https://vavoo.to/vavoo-iptv/play/1388101311c930084973ec
 #EXTINF:-1 tvg-id="3310537792544cdc86ebe5" tvg-name="SMART BOX ACTION .c" tvg-logo="" group-title="Film",SMART BOX ACTION .c
 https://vavoo.to/vavoo-iptv/play/3310537792544cdc86ebe5
-#EXTINF:-1 tvg-id="4277750275dc95e89a7a22" tvg-name="SMART COCUK .s" tvg-logo="" group-title="Çocuk",SMART COCUK .s
-https://vavoo.to/vavoo-iptv/play/4277750275dc95e89a7a22
 #EXTINF:-1 tvg-id="81357489557fd83fc1e55" tvg-name="SMART COCUK HD .b" tvg-logo="" group-title="Çocuk",SMART COCUK HD .b
 https://vavoo.to/vavoo-iptv/play/81357489557fd83fc1e55
 #EXTINF:-1 tvg-id="4137962062d812f45c58bd" tvg-name="SMART SPOR 1 .s" tvg-logo="" group-title="Spor",SMART SPOR 1 .s
@@ -1809,6 +1793,8 @@ https://vavoo.to/vavoo-iptv/play/3278735965dfe5a38d92ee
 https://vavoo.to/vavoo-iptv/play/90716509593fd6426951b
 #EXTINF:-1 tvg-id="SporSmart2.tr@SD" tvg-name="SPOR SMART 2 .s" tvg-logo="https://i.imgur.com/qyUKCUa.png" group-title="Spor",SPOR SMART 2 .s
 https://vavoo.to/vavoo-iptv/play/2228088973f56fff74c71f
+#EXTINF:-1 tvg-id="SporSmart2.tr@SD" tvg-name="SPOR SMART 2 HD .b" tvg-logo="https://i.imgur.com/qyUKCUa.png" group-title="Spor",SPOR SMART 2 HD .b
+https://vavoo.to/vavoo-iptv/play/2726496671ea6fd3c6dc54
 #EXTINF:-1 tvg-id="SporSmart.tr@SD" tvg-name="SPOR SMART FHD .b" tvg-logo="https://i.imgur.com/blu6v6P.png" group-title="Spor",SPOR SMART FHD .b
 https://vavoo.to/vavoo-iptv/play/37639315201c3521e36c44
 #EXTINF:-1 tvg-id="SporSmart.tr@SD" tvg-name="SPOR SMART HD .b" tvg-logo="https://i.imgur.com/blu6v6P.png" group-title="Spor",SPOR SMART HD .b
@@ -1845,26 +1831,20 @@ https://vavoo.to/vavoo-iptv/play/3122863032b740767c3962
 https://vavoo.to/vavoo-iptv/play/3430890461cfc692e06899
 #EXTINF:-1 tvg-id="SozcuTV.tr@SD" tvg-name="SZC .c" tvg-logo="https://logo.huhu.to/logo?c=2036794972.png" group-title="Haber",SZC .c
 https://vavoo.to/vavoo-iptv/play/2036794972b992547192b9
-#EXTINF:-1 tvg-id="386858202535408958c42e" tvg-name="SÜNGER BOB .c" tvg-logo="https://logo.huhu.to/logo?c=3868582025.png" group-title="Çocuk",SÜNGER BOB .c
-https://vavoo.to/vavoo-iptv/play/386858202535408958c42e
 #EXTINF:-1 tvg-id="155328876347a2cbbc72a9" tvg-name="SIFIR TV HD .b" tvg-logo="https://logo.huhu.to/logo?c=1553288763.png" group-title="Film",SIFIR TV HD .b
 https://vavoo.to/vavoo-iptv/play/155328876347a2cbbc72a9
 #EXTINF:-1 tvg-id="SİNEMA.1001.HD.tr" tvg-name="SINEMA 1001 .s" tvg-logo="https://i.imgur.com/OOMEELj.png" group-title="Film",SINEMA 1001 .s
 https://vavoo.to/vavoo-iptv/play/31176836283456f45c9e32
-#EXTINF:-1 tvg-id="SİNEMA.1002.tr" tvg-name="SINEMA 1002 .s" tvg-logo="https://i.imgur.com/BEFyizf.png" group-title="Film",SINEMA 1002 .s
-https://vavoo.to/vavoo-iptv/play/426904204409e59151cc23
 #EXTINF:-1 tvg-id="129312789771362713c30c" tvg-name="SINEMA AKSIYON 1 .s" tvg-logo="" group-title="Film",SINEMA AKSIYON 1 .s
 https://vavoo.to/vavoo-iptv/play/129312789771362713c30c
 #EXTINF:-1 tvg-id="SİNEMA.AKSİYON.2.HD.tr" tvg-name="SINEMA AKSIYON 2 .s" tvg-logo="https://i.imgur.com/oy8Nq1r.png" group-title="Film",SINEMA AKSIYON 2 .s
 https://vavoo.to/vavoo-iptv/play/179563017fcc76df8dfba
-#EXTINF:-1 tvg-id="424550844375a964b5b3e5" tvg-name="SINEMA AILE 1 .s" tvg-logo="" group-title="Film",SINEMA AILE 1 .s
-https://vavoo.to/vavoo-iptv/play/424550844375a964b5b3e5
+#EXTINF:-1 tvg-id="SİNEMA.AİLE.2.HD.tr" tvg-name="SINEMA AILE 2 .s" tvg-logo="https://i.imgur.com/EMJiBSb.png" group-title="Film",SINEMA AILE 2 .s
+https://vavoo.to/vavoo-iptv/play/313191105166e25adfec26
 #EXTINF:-1 tvg-id="SİNEMA.KOMEDİ.HD.tr" tvg-name="SINEMA KOMEDI .s" tvg-logo="https://i.imgur.com/U4C7JId.png" group-title="Film",SINEMA KOMEDI .s
 https://vavoo.to/vavoo-iptv/play/257449668222de73cc4ad
 #EXTINF:-1 tvg-id="SinemaTV.tr@SD" tvg-name="SINEMA TV .s" tvg-logo="https://i.imgur.com/qstBXDP.png" group-title="Film",SINEMA TV .s
 https://vavoo.to/vavoo-iptv/play/16177199419730b495b23d
-#EXTINF:-1 tvg-id="24848056995333a11423de" tvg-name="SINEMA YERLI 1 .s" tvg-logo="" group-title="Film",SINEMA YERLI 1 .s
-https://vavoo.to/vavoo-iptv/play/24848056995333a11423de
 #EXTINF:-1 tvg-id="2789249461c1ad5d07b17a" tvg-name="SINEMAX DRAMA .s" tvg-logo="" group-title="Film",SINEMAX DRAMA .s
 https://vavoo.to/vavoo-iptv/play/2789249461c1ad5d07b17a
 #EXTINF:-1 tvg-id="14694844750eea4e90973f" tvg-name="SINEMAX FAMILY .s" tvg-logo="" group-title="Film",SINEMAX FAMILY .s
@@ -1879,12 +1859,8 @@ https://vavoo.to/vavoo-iptv/play/3562169936e24369ffef8d
 https://vavoo.to/vavoo-iptv/play/1434492924511874701343
 #EXTINF:-1 tvg-id="567459984fcc0c3381a21" tvg-name="SINEVIZYON 5 .s" tvg-logo="" group-title="Film",SINEVIZYON 5 .s
 https://vavoo.to/vavoo-iptv/play/567459984fcc0c3381a21
-#EXTINF:-1 tvg-id="3644982305b65576486ef2" tvg-name="SINEVIZYON 8 .s" tvg-logo="" group-title="Film",SINEVIZYON 8 .s
-https://vavoo.to/vavoo-iptv/play/3644982305b65576486ef2
 #EXTINF:-1 tvg-id="237327525e72f36a04e37" tvg-name="SINEVIZYON TURK 1 .s" tvg-logo="" group-title="Film",SINEVIZYON TURK 1 .s
 https://vavoo.to/vavoo-iptv/play/237327525e72f36a04e37
-#EXTINF:-1 tvg-id="13493455810611836e96c5" tvg-name="SINEVIZYON TURK 10 .s" tvg-logo="" group-title="Film",SINEVIZYON TURK 10 .s
-https://vavoo.to/vavoo-iptv/play/13493455810611836e96c5
 #EXTINF:-1 tvg-id="1233464949183c7280e3a4" tvg-name="SINEVIZYON TURK 2 .s" tvg-logo="" group-title="Film",SINEVIZYON TURK 2 .s
 https://vavoo.to/vavoo-iptv/play/1233464949183c7280e3a4
 #EXTINF:-1 tvg-id="4221956709ff9a263200e0" tvg-name="SINEVIZYON TURK 5 .s" tvg-logo="" group-title="Film",SINEVIZYON TURK 5 .s
@@ -1903,14 +1879,14 @@ https://vavoo.to/vavoo-iptv/play/1556019396cbe671ed73f4
 https://vavoo.to/vavoo-iptv/play/38334830340b3e0ebfcab
 #EXTINF:-1 tvg-id="17662417455982b1730d90" tvg-name="SIRINLER TV .s" tvg-logo="" group-title="Çocuk",SIRINLER TV .s
 https://vavoo.to/vavoo-iptv/play/17662417455982b1730d90
+#EXTINF:-1 tvg-id="9857690718548a212a15f" tvg-name="SIVAS .b" tvg-logo="" group-title="Yerel",SIVAS .b
+https://vavoo.to/vavoo-iptv/play/9857690718548a212a15f
 #EXTINF:-1 tvg-id="716793106eede08a41963" tvg-name="SIVAS VIZYON 58 TV .b" tvg-logo="" group-title="Film",SIVAS VIZYON 58 TV .b
 https://vavoo.to/vavoo-iptv/play/716793106eede08a41963
 #EXTINF:-1 tvg-id="27868531047ce3c7e0c624" tvg-name="T RK E POP .b" tvg-logo="" group-title="Müzik",T RK E POP .b
 https://vavoo.to/vavoo-iptv/play/27868531047ce3c7e0c624
 #EXTINF:-1 tvg-id="363376564553c0e5fb6262" tvg-name="T.A.Y TV .b" tvg-logo="https://logo.huhu.to/logo?c=3633765645.png" group-title="Yerel",T.A.Y TV .b
 https://vavoo.to/vavoo-iptv/play/363376564553c0e5fb6262
-#EXTINF:-1 tvg-id="1844863271513a413a321" tvg-name="TABII SPOR .c" tvg-logo="" group-title="Spor",TABII SPOR .c
-https://vavoo.to/vavoo-iptv/play/1844863271513a413a321
 #EXTINF:-1 tvg-id="10977951419d3dfac60f92" tvg-name="TABII SPOR 1 .c" tvg-logo="" group-title="Spor",TABII SPOR 1 .c
 https://vavoo.to/vavoo-iptv/play/10977951419d3dfac60f92
 #EXTINF:-1 tvg-id="36659147631b81d08d6c82" tvg-name="TABII SPOR 1 720P .b" tvg-logo="https://logo.huhu.to/logo?c=3665914763.png" group-title="Spor",TABII SPOR 1 720P .b
@@ -1919,30 +1895,28 @@ https://vavoo.to/vavoo-iptv/play/36659147631b81d08d6c82
 https://vavoo.to/vavoo-iptv/play/310770852202539a162e99
 #EXTINF:-1 tvg-id="11426114102c71664711c" tvg-name="TABII SPOR 2 .c" tvg-logo="" group-title="Spor",TABII SPOR 2 .c
 https://vavoo.to/vavoo-iptv/play/11426114102c71664711c
+#EXTINF:-1 tvg-id="21594692318c346548c2be" tvg-name="TABII SPOR 2 UHD .b" tvg-logo="https://logo.huhu.to/logo?c=2159469231.png" group-title="Spor",TABII SPOR 2 UHD .b
+https://vavoo.to/vavoo-iptv/play/21594692318c346548c2be
 #EXTINF:-1 tvg-id="10013463414fd5f0938a50" tvg-name="TABII SPOR 3 .c" tvg-logo="" group-title="Spor",TABII SPOR 3 .c
 https://vavoo.to/vavoo-iptv/play/10013463414fd5f0938a50
 #EXTINF:-1 tvg-id="2546857708611b47e42ecf" tvg-name="TABII SPOR 3 UHD .b" tvg-logo="https://logo.huhu.to/logo?c=2546857708.png" group-title="Spor",TABII SPOR 3 UHD .b
 https://vavoo.to/vavoo-iptv/play/2546857708611b47e42ecf
 #EXTINF:-1 tvg-id="2307885365b7f1828e97ba" tvg-name="TABII SPOR 4 .c" tvg-logo="" group-title="Spor",TABII SPOR 4 .c
 https://vavoo.to/vavoo-iptv/play/2307885365b7f1828e97ba
-#EXTINF:-1 tvg-id="408817539739fafefc9d3b" tvg-name="TABII SPOR 4 UHD .b" tvg-logo="https://logo.huhu.to/logo?c=4088175397.png" group-title="Spor",TABII SPOR 4 UHD .b
-https://vavoo.to/vavoo-iptv/play/408817539739fafefc9d3b
 #EXTINF:-1 tvg-id="3035603077ef0df0e5da67" tvg-name="TABII SPOR 5 .c" tvg-logo="" group-title="Spor",TABII SPOR 5 .c
 https://vavoo.to/vavoo-iptv/play/3035603077ef0df0e5da67
 #EXTINF:-1 tvg-id="40820967253b1d74e19a7f" tvg-name="TABII SPOR 6 .c" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w300/43020.jpeg" group-title="Spor",TABII SPOR 6 .c
 https://vavoo.to/vavoo-iptv/play/40820967253b1d74e19a7f
 #EXTINF:-1 tvg-id="270984838ca5cfbf75daa" tvg-name="TABII SPOR 6 HD .b" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w300/43020.jpeg" group-title="Spor",TABII SPOR 6 HD .b
 https://vavoo.to/vavoo-iptv/play/270984838ca5cfbf75daa
-#EXTINF:-1 tvg-id="37137089631c97c5b7ef8f" tvg-name="TABII SPOR 6 UHD .b" tvg-logo="https://cms-tabii-public-image.tabii.com/int/w300/43020.jpeg" group-title="Spor",TABII SPOR 6 UHD .b
-https://vavoo.to/vavoo-iptv/play/37137089631c97c5b7ef8f
+#EXTINF:-1 tvg-id="225948008747f499d08214" tvg-name="TABII SPOR HD .b" tvg-logo="https://logo.huhu.to/logo?c=2259480087.png" group-title="Spor",TABII SPOR HD .b
+https://vavoo.to/vavoo-iptv/play/225948008747f499d08214
 #EXTINF:-1 tvg-id="40221481750ee503c548f9" tvg-name="TABII SPOR SD .b" tvg-logo="https://logo.huhu.to/logo?c=4022148175.png" group-title="Spor",TABII SPOR SD .b
 https://vavoo.to/vavoo-iptv/play/40221481750ee503c548f9
 #EXTINF:-1 tvg-id="150823084612c089acb3d" tvg-name="TARKAN .b" tvg-logo="" group-title="Müzik",TARKAN .b
 https://vavoo.to/vavoo-iptv/play/150823084612c089acb3d
 #EXTINF:-1 tvg-id="TarihTV.tr@SD" tvg-name="TARIH TV .c" tvg-logo="https://i.imgur.com/HbIGZUt.png" group-title="Belgesel",TARIH TV .c
 https://vavoo.to/vavoo-iptv/play/3856957052050da882aa10
-#EXTINF:-1 tvg-id="19930472434be833e11c22" tvg-name="TARIM TV .s" tvg-logo="https://i.imgur.com/q30sFms.png" group-title="Belgesel",TARIM TV .s
-https://vavoo.to/vavoo-iptv/play/19930472434be833e11c22
 #EXTINF:-1 tvg-id="3333865510ce3775d7abc0" tvg-name="TATLISES TV .c" tvg-logo="https://i.imgur.com/et1sbyq.png" group-title="Müzik",TATLISES TV .c
 https://vavoo.to/vavoo-iptv/play/3333865510ce3775d7abc0
 #EXTINF:-1 tvg-id="2292336979752459c08202" tvg-name="TAVSAN MOMO .b" tvg-logo="" group-title="Çocuk",TAVSAN MOMO .b
@@ -1963,8 +1937,6 @@ https://vavoo.to/vavoo-iptv/play/35602928690d57b8926e55
 https://vavoo.to/vavoo-iptv/play/135762464349d3676ea069
 #EXTINF:-1 tvg-id="Tele1.tr@SD" tvg-name="TELE 1 .s" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/43/Tele1_logosu.png" group-title="Haber",TELE 1 .s
 https://vavoo.to/vavoo-iptv/play/1025979520ee1c8a3dc728
-#EXTINF:-1 tvg-id="Tele1.tr@SD" tvg-name="TELE 1 SD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/43/Tele1_logosu.png" group-title="Haber",TELE 1 SD .b
-https://vavoo.to/vavoo-iptv/play/33823947399faceb7a3a0a
 #EXTINF:-1 tvg-id="1110088936411930c810bd" tvg-name="TELEGRAM GRUP LINKI .b" tvg-logo="https://logo.huhu.to/logo?c=1110088936.png" group-title="Yaşam",TELEGRAM GRUP LINKI .b
 https://vavoo.to/vavoo-iptv/play/1110088936411930c810bd
 #EXTINF:-1 tvg-id="3475377621188add6e6abc" tvg-name="TEMPO .s" tvg-logo="" group-title="Diğer",TEMPO .s
@@ -2067,8 +2039,6 @@ https://vavoo.to/vavoo-iptv/play/1101849390824792e0390b
 https://vavoo.to/vavoo-iptv/play/3681071746569ac21b544f
 #EXTINF:-1 tvg-id="17020398633aafc0a6bc" tvg-name="TRT EBA ORTAOKUL .s" tvg-logo="" group-title="Ulusal",TRT EBA ORTAOKUL .s
 https://vavoo.to/vavoo-iptv/play/17020398633aafc0a6bc
-#EXTINF:-1 tvg-id="228765803362ec29207df8" tvg-name="TRT EBA ILKOKUL .s" tvg-logo="https://i.imgur.com/CRBfZi4.png" group-title="Ulusal",TRT EBA ILKOKUL .s
-https://vavoo.to/vavoo-iptv/play/228765803362ec29207df8
 #EXTINF:-1 tvg-id="TRTHaber.tr@SD" tvg-name="TRT HABER .c" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png" group-title="Haber",TRT HABER .c
 https://vavoo.to/vavoo-iptv/play/2003703357957a75b3c760
 #EXTINF:-1 tvg-id="TRTHaber.tr@SD" tvg-name="TRT HABER .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/TRT_Haber_Eyl%C3%BCl_2020_Logo.svg/960px-TRT_Haber_Eyl%C3%BCl_2020_Logo.svg.png" group-title="Haber",TRT HABER .s
@@ -2117,8 +2087,6 @@ https://vavoo.to/vavoo-iptv/play/409809325606dced407ba1
 https://vavoo.to/vavoo-iptv/play/79776873160ecd1f8c09f
 #EXTINF:-1 tvg-id="TRTTurk.tr@SD" tvg-name="TRT TURK HEVC .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/TRT_T%C3%BCrk_logo.svg/960px-TRT_T%C3%BCrk_logo.svg.png" group-title="Ulusal",TRT TURK HEVC .b
 https://vavoo.to/vavoo-iptv/play/1619096863c7e11f78a1b0
-#EXTINF:-1 tvg-id="TRTTurk.tr@SD" tvg-name="TRT TURK RAW .b" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/TRT_T%C3%BCrk_logo.svg/960px-TRT_T%C3%BCrk_logo.svg.png" group-title="Ulusal",TRT TURK RAW .b
-https://vavoo.to/vavoo-iptv/play/4095879853e79f376bf5ca
 #EXTINF:-1 tvg-id="58d29bb0eefad3db9c6062cc" tvg-name="TRT WORLD .c" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRT_World.svg/960px-TRT_World.svg.png" group-title="Haber",TRT WORLD .c
 https://vavoo.to/vavoo-iptv/play/3203147403a3de72a3f660
 #EXTINF:-1 tvg-id="58d29bb0eefad3db9c6062cc" tvg-name="TRT WORLD .s" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/TRT_World.svg/960px-TRT_World.svg.png" group-title="Haber",TRT WORLD .s
@@ -2159,8 +2127,6 @@ https://vavoo.to/vavoo-iptv/play/9760498644cca0d67323e
 https://vavoo.to/vavoo-iptv/play/205519968384925ef64834
 #EXTINF:-1 tvg-id="108017205852b77c50bdce" tvg-name="TV 52 .b" tvg-logo="https://i.imgur.com/k4R5CzO.png" group-title="Yerel",TV 52 .b
 https://vavoo.to/vavoo-iptv/play/108017205852b77c50bdce
-#EXTINF:-1 tvg-id="405074878169aaa15f6633" tvg-name="TV 52 .c" tvg-logo="https://i.imgur.com/k4R5CzO.png" group-title="Yerel",TV 52 .c
-https://vavoo.to/vavoo-iptv/play/405074878169aaa15f6633
 #EXTINF:-1 tvg-id="2602281851ee63662b2b6f" tvg-name="TV 52 ORDU .s" tvg-logo="" group-title="Yerel",TV 52 ORDU .s
 https://vavoo.to/vavoo-iptv/play/2602281851ee63662b2b6f
 #EXTINF:-1 tvg-id="TV8.cr@SD" tvg-name="TV 8 .c" tvg-logo="https://logo.huhu.to/logo?c=4292306921.png" group-title="Ulusal",TV 8 .c
@@ -2193,8 +2159,6 @@ https://vavoo.to/vavoo-iptv/play/427247780841181bd4210f
 https://vavoo.to/vavoo-iptv/play/2378683302a90688067b08
 #EXTINF:-1 tvg-id="TVNET.tr@SD" tvg-name="TV NET .c" tvg-logo="https://logo.huhu.to/logo?c=1225673773.png" group-title="Ulusal",TV NET .c
 https://vavoo.to/vavoo-iptv/play/1225673773af8c29391e81
-#EXTINF:-1 tvg-id="935671761c36c5491c3ed" tvg-name="TV5 .b" tvg-logo="" group-title="Dini",TV5 .b
-https://vavoo.to/vavoo-iptv/play/935671761c36c5491c3ed
 #EXTINF:-1 tvg-id="241220593740c7258ef669" tvg-name="TV8 5 RAW .b" tvg-logo="https://logo.huhu.to/logo?c=2412205937.png" group-title="Ulusal",TV8 5 RAW .b
 https://vavoo.to/vavoo-iptv/play/241220593740c7258ef669
 #EXTINF:-1 tvg-id="TV8.tr@SD" tvg-name="TV8 FHD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png" group-title="Ulusal",TV8 FHD .b
@@ -2205,8 +2169,6 @@ https://vavoo.to/vavoo-iptv/play/1702470161fe0c4007a0bb
 https://vavoo.to/vavoo-iptv/play/199101032472d01db313b0
 #EXTINF:-1 tvg-id="TV8.tr@SD" tvg-name="TV8 SD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png" group-title="Ulusal",TV8 SD .b
 https://vavoo.to/vavoo-iptv/play/208162889d5e4a2120cf8
-#EXTINF:-1 tvg-id="3524690612e75743431c37" tvg-name="TVDEN TV .b" tvg-logo="" group-title="Ulusal",TVDEN TV .b
-https://vavoo.to/vavoo-iptv/play/3524690612e75743431c37
 #EXTINF:-1 tvg-id="TVNET.HD.tr" tvg-name="TVNET .s" tvg-logo="https://i.imgur.com/mQo8yWQ.png" group-title="Dini",TVNET .s
 https://vavoo.to/vavoo-iptv/play/122166175526c22658c312
 #EXTINF:-1 tvg-id="2916629658495062daeb5f" tvg-name="TVO TV .b" tvg-logo="" group-title="Ulusal",TVO TV .b
@@ -2217,8 +2179,6 @@ https://vavoo.to/vavoo-iptv/play/18406648801d1a8ab316b6
 https://vavoo.to/vavoo-iptv/play/2012038243cd78e54611e8
 #EXTINF:-1 tvg-id="Tivi6.tr@SD" tvg-name="TIVI 6 .c" tvg-logo="https://i.imgur.com/Mbi0jbz.png" group-title="Yerel",TIVI 6 .c
 https://vavoo.to/vavoo-iptv/play/7741680162cf446ba65c6
-#EXTINF:-1 tvg-id="2048436163c35ea978c4df" tvg-name="TIVI TURK .s" tvg-logo="https://logo.huhu.to/logo?c=2048436163.png" group-title="Ulusal",TIVI TURK .s
-https://vavoo.to/vavoo-iptv/play/2048436163c35ea978c4df
 #EXTINF:-1 tvg-id="7021579547bba092a6b21" tvg-name="TIVI TÜRK .c" tvg-logo="https://logo.huhu.to/logo?c=702157954.png" group-title="Ulusal",TIVI TÜRK .c
 https://vavoo.to/vavoo-iptv/play/7021579547bba092a6b21
 #EXTINF:-1 tvg-id="1159899920595e9c441350" tvg-name="TIVIBU SPOR .c" tvg-logo="https://i.imgur.com/qvrKQY3.png" group-title="Spor",TIVIBU SPOR .c
@@ -2287,8 +2247,6 @@ https://vavoo.to/vavoo-iptv/play/1910048817671d14cfb4cd
 https://vavoo.to/vavoo-iptv/play/1917903629c14eaf063f26
 #EXTINF:-1 tvg-id="6396593594335b4483732" tvg-name="UR FANATIK TV .c" tvg-logo="https://logo.huhu.to/logo?c=639659359.png" group-title="Yerel",UR FANATIK TV .c
 https://vavoo.to/vavoo-iptv/play/6396593594335b4483732
-#EXTINF:-1 tvg-id="32821815116af88acacbb6" tvg-name="VATAN TV .b" tvg-logo="https://i.imgur.com/xrZVgf6.png" group-title="Yerel",VATAN TV .b
-https://vavoo.to/vavoo-iptv/play/32821815116af88acacbb6
 #EXTINF:-1 tvg-id="2730047464284a34ade8a0" tvg-name="VATAN TV .s" tvg-logo="https://i.imgur.com/xrZVgf6.png" group-title="Yerel",VATAN TV .s
 https://vavoo.to/vavoo-iptv/play/2730047464284a34ade8a0
 #EXTINF:-1 tvg-id="94903312294e3da09f3b7" tvg-name="VUSLAT TV .c" tvg-logo="https://i.imgur.com/5AiUlIJ.png" group-title="Dini",VUSLAT TV .c
@@ -2325,8 +2283,6 @@ https://vavoo.to/vavoo-iptv/play/1283602496384076ba9dda
 https://vavoo.to/vavoo-iptv/play/2278118654dd2b5fc7cf6c
 #EXTINF:-1 tvg-id="54557664023a53669f0a8" tvg-name="WAKFU .b" tvg-logo="" group-title="Çocuk",WAKFU .b
 https://vavoo.to/vavoo-iptv/play/54557664023a53669f0a8
-#EXTINF:-1 tvg-id="3259520726e713e4000bfa" tvg-name="WM TV WOMAN KADIN .b" tvg-logo="" group-title="Yaşam",WM TV WOMAN KADIN .b
-https://vavoo.to/vavoo-iptv/play/3259520726e713e4000bfa
 #EXTINF:-1 tvg-id="1767757052f44dee90b42b" tvg-name="X NOSTALJI T RK E KLASIK .b" tvg-logo="" group-title="Radyo",X NOSTALJI T RK E KLASIK .b
 https://vavoo.to/vavoo-iptv/play/1767757052f44dee90b42b
 #EXTINF:-1 tvg-id="3338159581a989d003ec5a" tvg-name="YABAN .c" tvg-logo="https://logo.huhu.to/logo?c=3338159581.png" group-title="Belgesel",YABAN .c
@@ -2335,8 +2291,6 @@ https://vavoo.to/vavoo-iptv/play/3338159581a989d003ec5a
 https://vavoo.to/vavoo-iptv/play/42046159902bf40614cf6e
 #EXTINF:-1 tvg-id="178850393550c13d869fbf" tvg-name="YABAN TV HD .b" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/3/38/Yabantv_logo.png/960px-Yabantv_logo.png" group-title="Belgesel",YABAN TV HD .b
 https://vavoo.to/vavoo-iptv/play/178850393550c13d869fbf
-#EXTINF:-1 tvg-id="758663570c267cae815eb" tvg-name="YENI KOCAELI TV .b" tvg-logo="" group-title="Yerel",YENI KOCAELI TV .b
-https://vavoo.to/vavoo-iptv/play/758663570c267cae815eb
 #EXTINF:-1 tvg-id="15843353838096cf65cb7d" tvg-name="YESILCAM .c" tvg-logo="" group-title="Film",YESILCAM .c
 https://vavoo.to/vavoo-iptv/play/15843353838096cf65cb7d
 #EXTINF:-1 tvg-id="1952835738c83bfddaf481" tvg-name="YESILCAM 1 .s" tvg-logo="" group-title="Film",YESILCAM 1 .s
@@ -2355,8 +2309,6 @@ https://vavoo.to/vavoo-iptv/play/10711660543c82502a97f7
 https://vavoo.to/vavoo-iptv/play/607077155292bdb1bc79a
 #EXTINF:-1 tvg-id="32452978184d58e060917f" tvg-name="YUNUS EMRE .b" tvg-logo="" group-title="Dini",YUNUS EMRE .b
 https://vavoo.to/vavoo-iptv/play/32452978184d58e060917f
-#EXTINF:-1 tvg-id="394501159c3596812d61e" tvg-name="YILDIZ EN TV .b" tvg-logo="" group-title="Diğer",YILDIZ EN TV .b
-https://vavoo.to/vavoo-iptv/play/394501159c3596812d61e
 #EXTINF:-1 tvg-id="12401366196105d6b0425b" tvg-name="YILDIZ KIZ .b" tvg-logo="" group-title="Çocuk",YILDIZ KIZ .b
 https://vavoo.to/vavoo-iptv/play/12401366196105d6b0425b
 #EXTINF:-1 tvg-id="4050722013efecdc85c9b" tvg-name="YILDIZ TILBE .b" tvg-logo="" group-title="Müzik",YILDIZ TILBE .b
